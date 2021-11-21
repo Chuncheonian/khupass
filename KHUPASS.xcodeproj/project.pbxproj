@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D58DE8D4274A58BE00773BBE /* NanumGothicOTFExtraBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = D58DE8D1274A58BD00773BBE /* NanumGothicOTFExtraBold.otf */; };
+		D58DE8D5274A58BE00773BBE /* NanumGothicOTF.otf in Resources */ = {isa = PBXBuildFile; fileRef = D58DE8D2274A58BE00773BBE /* NanumGothicOTF.otf */; };
+		D58DE8D6274A58BE00773BBE /* NanumGothicOTFBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = D58DE8D3274A58BE00773BBE /* NanumGothicOTFBold.otf */; };
 		D5C78D6F27451283008FAC9A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5C78D6E27451283008FAC9A /* AppDelegate.swift */; };
 		D5C78D7127451283008FAC9A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5C78D7027451283008FAC9A /* SceneDelegate.swift */; };
 		D5C78D7327451283008FAC9A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5C78D7227451283008FAC9A /* ViewController.swift */; };
@@ -14,9 +17,13 @@
 		D5C78D7B27451285008FAC9A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D5C78D7927451285008FAC9A /* LaunchScreen.storyboard */; };
 		D5E980FB274A4BF900FD0A98 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = D5E980FA274A4BF900FD0A98 /* SnapKit */; };
 		D5E980FE274A4C0400FD0A98 /* Then in Frameworks */ = {isa = PBXBuildFile; productRef = D5E980FD274A4C0400FD0A98 /* Then */; };
+		D5E9810A274A51C300FD0A98 /* UIFont+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5E98109274A51C300FD0A98 /* UIFont+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D58DE8D1274A58BD00773BBE /* NanumGothicOTFExtraBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = NanumGothicOTFExtraBold.otf; path = NanumGothic/NanumGothicOTFExtraBold.otf; sourceTree = "<group>"; };
+		D58DE8D2274A58BE00773BBE /* NanumGothicOTF.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = NanumGothicOTF.otf; path = NanumGothic/NanumGothicOTF.otf; sourceTree = "<group>"; };
+		D58DE8D3274A58BE00773BBE /* NanumGothicOTFBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = NanumGothicOTFBold.otf; path = NanumGothic/NanumGothicOTFBold.otf; sourceTree = "<group>"; };
 		D5C78D6B27451283008FAC9A /* KHUPASS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KHUPASS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5C78D6E27451283008FAC9A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D5C78D7027451283008FAC9A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +31,7 @@
 		D5C78D7727451285008FAC9A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D5C78D7A27451285008FAC9A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D5C78D7C27451285008FAC9A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D5E98109274A51C300FD0A98 /* UIFont+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +70,7 @@
 				D5C78D842745212B008FAC9A /* View */,
 				D5C78D852745212F008FAC9A /* ViewModel */,
 				D5C78D8627452134008FAC9A /* Controller */,
+				D5E98107274A519D00FD0A98 /* Utils */,
 				D5C78D82274515D0008FAC9A /* Support */,
 			);
 			path = KHUPASS;
@@ -70,6 +79,7 @@
 		D5C78D82274515D0008FAC9A /* Support */ = {
 			isa = PBXGroup;
 			children = (
+				D5E980FF274A501A00FD0A98 /* Fonts */,
 				D5C78D6E27451283008FAC9A /* AppDelegate.swift */,
 				D5C78D7027451283008FAC9A /* SceneDelegate.swift */,
 				D5C78D7927451285008FAC9A /* LaunchScreen.storyboard */,
@@ -106,6 +116,32 @@
 				D5C78D7227451283008FAC9A /* ViewController.swift */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		D5E980FF274A501A00FD0A98 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				D58DE8D3274A58BE00773BBE /* NanumGothicOTFBold.otf */,
+				D58DE8D1274A58BD00773BBE /* NanumGothicOTFExtraBold.otf */,
+				D58DE8D2274A58BE00773BBE /* NanumGothicOTF.otf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		D5E98107274A519D00FD0A98 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				D5E98108274A51B500FD0A98 /* Extensions */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		D5E98108274A51B500FD0A98 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				D5E98109274A51C300FD0A98 /* UIFont+Extension.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -174,7 +210,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D58DE8D6274A58BE00773BBE /* NanumGothicOTFBold.otf in Resources */,
+				D58DE8D4274A58BE00773BBE /* NanumGothicOTFExtraBold.otf in Resources */,
 				D5C78D7B27451285008FAC9A /* LaunchScreen.storyboard in Resources */,
+				D58DE8D5274A58BE00773BBE /* NanumGothicOTF.otf in Resources */,
 				D5C78D7827451285008FAC9A /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -188,6 +227,7 @@
 			files = (
 				D5C78D7327451283008FAC9A /* ViewController.swift in Sources */,
 				D5C78D6F27451283008FAC9A /* AppDelegate.swift in Sources */,
+				D5E9810A274A51C300FD0A98 /* UIFont+Extension.swift in Sources */,
 				D5C78D7127451283008FAC9A /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
