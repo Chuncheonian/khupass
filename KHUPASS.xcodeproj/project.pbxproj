@@ -15,6 +15,7 @@
 		D58DE8E0274A795A00773BBE /* UILabel+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D58DE8DF274A795A00773BBE /* UILabel+Extension.swift */; };
 		D58DE8E2274A7BE000773BBE /* PassController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D58DE8E1274A7BE000773BBE /* PassController.swift */; };
 		D58DE8E4274A805A00773BBE /* ScannerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D58DE8E3274A805A00773BBE /* ScannerController.swift */; };
+		D58DE8E7274A943F00773BBE /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = D58DE8E6274A943F00773BBE /* Lottie */; };
 		D5C78D6F27451283008FAC9A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5C78D6E27451283008FAC9A /* AppDelegate.swift */; };
 		D5C78D7127451283008FAC9A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5C78D7027451283008FAC9A /* SceneDelegate.swift */; };
 		D5C78D7327451283008FAC9A /* BarcodeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5C78D7227451283008FAC9A /* BarcodeController.swift */; };
@@ -51,6 +52,7 @@
 			files = (
 				D5E980FB274A4BF900FD0A98 /* SnapKit in Frameworks */,
 				D5E980FE274A4C0400FD0A98 /* Then in Frameworks */,
+				D58DE8E7274A943F00773BBE /* Lottie in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -178,6 +180,7 @@
 			packageProductDependencies = (
 				D5E980FA274A4BF900FD0A98 /* SnapKit */,
 				D5E980FD274A4C0400FD0A98 /* Then */,
+				D58DE8E6274A943F00773BBE /* Lottie */,
 			);
 			productName = KHUPASS;
 			productReference = D5C78D6B27451283008FAC9A /* KHUPASS.app */;
@@ -210,6 +213,7 @@
 			packageReferences = (
 				D5E980F9274A4BF900FD0A98 /* XCRemoteSwiftPackageReference "SnapKit" */,
 				D5E980FC274A4C0400FD0A98 /* XCRemoteSwiftPackageReference "Then" */,
+				D58DE8E5274A943F00773BBE /* XCRemoteSwiftPackageReference "lottie-ios" */,
 			);
 			productRefGroup = D5C78D6C27451283008FAC9A /* Products */;
 			projectDirPath = "";
@@ -464,6 +468,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		D58DE8E5274A943F00773BBE /* XCRemoteSwiftPackageReference "lottie-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/airbnb/lottie-ios";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.0.0;
+			};
+		};
 		D5E980F9274A4BF900FD0A98 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/SnapKit/SnapKit";
@@ -483,6 +495,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		D58DE8E6274A943F00773BBE /* Lottie */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D58DE8E5274A943F00773BBE /* XCRemoteSwiftPackageReference "lottie-ios" */;
+			productName = Lottie;
+		};
 		D5E980FA274A4BF900FD0A98 /* SnapKit */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = D5E980F9274A4BF900FD0A98 /* XCRemoteSwiftPackageReference "SnapKit" */;
