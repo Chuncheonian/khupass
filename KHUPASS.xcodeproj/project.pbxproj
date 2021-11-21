@@ -11,9 +11,13 @@
 		D58DE8D5274A58BE00773BBE /* NanumGothicOTF.otf in Resources */ = {isa = PBXBuildFile; fileRef = D58DE8D2274A58BE00773BBE /* NanumGothicOTF.otf */; };
 		D58DE8D6274A58BE00773BBE /* NanumGothicOTFBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = D58DE8D3274A58BE00773BBE /* NanumGothicOTFBold.otf */; };
 		D58DE8DA274A5E1300773BBE /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D58DE8D9274A5E1300773BBE /* UIColor+Extension.swift */; };
+		D58DE8DE274A6F4D00773BBE /* IntroController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D58DE8DD274A6F4D00773BBE /* IntroController.swift */; };
+		D58DE8E0274A795A00773BBE /* UILabel+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D58DE8DF274A795A00773BBE /* UILabel+Extension.swift */; };
+		D58DE8E2274A7BE000773BBE /* PassController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D58DE8E1274A7BE000773BBE /* PassController.swift */; };
+		D58DE8E4274A805A00773BBE /* ScannerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D58DE8E3274A805A00773BBE /* ScannerController.swift */; };
 		D5C78D6F27451283008FAC9A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5C78D6E27451283008FAC9A /* AppDelegate.swift */; };
 		D5C78D7127451283008FAC9A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5C78D7027451283008FAC9A /* SceneDelegate.swift */; };
-		D5C78D7327451283008FAC9A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5C78D7227451283008FAC9A /* ViewController.swift */; };
+		D5C78D7327451283008FAC9A /* BarcodeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5C78D7227451283008FAC9A /* BarcodeController.swift */; };
 		D5C78D7827451285008FAC9A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D5C78D7727451285008FAC9A /* Assets.xcassets */; };
 		D5C78D7B27451285008FAC9A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D5C78D7927451285008FAC9A /* LaunchScreen.storyboard */; };
 		D5E980FB274A4BF900FD0A98 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = D5E980FA274A4BF900FD0A98 /* SnapKit */; };
@@ -26,10 +30,14 @@
 		D58DE8D2274A58BE00773BBE /* NanumGothicOTF.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = NanumGothicOTF.otf; path = NanumGothic/NanumGothicOTF.otf; sourceTree = "<group>"; };
 		D58DE8D3274A58BE00773BBE /* NanumGothicOTFBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = NanumGothicOTFBold.otf; path = NanumGothic/NanumGothicOTFBold.otf; sourceTree = "<group>"; };
 		D58DE8D9274A5E1300773BBE /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = SOURCE_ROOT; };
+		D58DE8DD274A6F4D00773BBE /* IntroController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroController.swift; sourceTree = "<group>"; };
+		D58DE8DF274A795A00773BBE /* UILabel+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+Extension.swift"; sourceTree = "<group>"; };
+		D58DE8E1274A7BE000773BBE /* PassController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PassController.swift; sourceTree = "<group>"; };
+		D58DE8E3274A805A00773BBE /* ScannerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScannerController.swift; sourceTree = "<group>"; };
 		D5C78D6B27451283008FAC9A /* KHUPASS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KHUPASS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5C78D6E27451283008FAC9A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D5C78D7027451283008FAC9A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		D5C78D7227451283008FAC9A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		D5C78D7227451283008FAC9A /* BarcodeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarcodeController.swift; sourceTree = "<group>"; };
 		D5C78D7727451285008FAC9A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D5C78D7A27451285008FAC9A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D5C78D7C27451285008FAC9A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -115,7 +123,10 @@
 		D5C78D8627452134008FAC9A /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				D5C78D7227451283008FAC9A /* ViewController.swift */,
+				D58DE8DD274A6F4D00773BBE /* IntroController.swift */,
+				D5C78D7227451283008FAC9A /* BarcodeController.swift */,
+				D58DE8E3274A805A00773BBE /* ScannerController.swift */,
+				D58DE8E1274A7BE000773BBE /* PassController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -143,6 +154,7 @@
 			children = (
 				D5E98109274A51C300FD0A98 /* UIFont+Extension.swift */,
 				D58DE8D9274A5E1300773BBE /* UIColor+Extension.swift */,
+				D58DE8DF274A795A00773BBE /* UILabel+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -228,8 +240,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D5C78D7327451283008FAC9A /* ViewController.swift in Sources */,
+				D58DE8E4274A805A00773BBE /* ScannerController.swift in Sources */,
+				D5C78D7327451283008FAC9A /* BarcodeController.swift in Sources */,
+				D58DE8DE274A6F4D00773BBE /* IntroController.swift in Sources */,
 				D5C78D6F27451283008FAC9A /* AppDelegate.swift in Sources */,
+				D58DE8E0274A795A00773BBE /* UILabel+Extension.swift in Sources */,
+				D58DE8E2274A7BE000773BBE /* PassController.swift in Sources */,
 				D5E9810A274A51C300FD0A98 /* UIFont+Extension.swift in Sources */,
 				D5C78D7127451283008FAC9A /* SceneDelegate.swift in Sources */,
 				D58DE8DA274A5E1300773BBE /* UIColor+Extension.swift in Sources */,
