@@ -10,6 +10,7 @@
 		D58DE8D4274A58BE00773BBE /* NanumGothicOTFExtraBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = D58DE8D1274A58BD00773BBE /* NanumGothicOTFExtraBold.otf */; };
 		D58DE8D5274A58BE00773BBE /* NanumGothicOTF.otf in Resources */ = {isa = PBXBuildFile; fileRef = D58DE8D2274A58BE00773BBE /* NanumGothicOTF.otf */; };
 		D58DE8D6274A58BE00773BBE /* NanumGothicOTFBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = D58DE8D3274A58BE00773BBE /* NanumGothicOTFBold.otf */; };
+		D58DE8DA274A5E1300773BBE /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D58DE8D9274A5E1300773BBE /* UIColor+Extension.swift */; };
 		D5C78D6F27451283008FAC9A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5C78D6E27451283008FAC9A /* AppDelegate.swift */; };
 		D5C78D7127451283008FAC9A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5C78D7027451283008FAC9A /* SceneDelegate.swift */; };
 		D5C78D7327451283008FAC9A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5C78D7227451283008FAC9A /* ViewController.swift */; };
@@ -24,6 +25,7 @@
 		D58DE8D1274A58BD00773BBE /* NanumGothicOTFExtraBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = NanumGothicOTFExtraBold.otf; path = NanumGothic/NanumGothicOTFExtraBold.otf; sourceTree = "<group>"; };
 		D58DE8D2274A58BE00773BBE /* NanumGothicOTF.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = NanumGothicOTF.otf; path = NanumGothic/NanumGothicOTF.otf; sourceTree = "<group>"; };
 		D58DE8D3274A58BE00773BBE /* NanumGothicOTFBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = NanumGothicOTFBold.otf; path = NanumGothic/NanumGothicOTFBold.otf; sourceTree = "<group>"; };
+		D58DE8D9274A5E1300773BBE /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = SOURCE_ROOT; };
 		D5C78D6B27451283008FAC9A /* KHUPASS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KHUPASS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5C78D6E27451283008FAC9A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D5C78D7027451283008FAC9A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -140,6 +142,7 @@
 			isa = PBXGroup;
 			children = (
 				D5E98109274A51C300FD0A98 /* UIFont+Extension.swift */,
+				D58DE8D9274A5E1300773BBE /* UIColor+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -229,6 +232,7 @@
 				D5C78D6F27451283008FAC9A /* AppDelegate.swift in Sources */,
 				D5E9810A274A51C300FD0A98 /* UIFont+Extension.swift in Sources */,
 				D5C78D7127451283008FAC9A /* SceneDelegate.swift in Sources */,
+				D58DE8DA274A5E1300773BBE /* UIColor+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
