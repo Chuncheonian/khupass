@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Lottie
 
 class BarcodeController: UIViewController {
 
@@ -29,6 +30,13 @@ class BarcodeController: UIViewController {
     $0.contentMode = .scaleAspectFill
   }
   
+  private let pigTailedArrowAnimation = AnimationView(name: "79064-arrows").then {
+    $0.contentMode = .scaleAspectFill
+    $0.loopMode = .autoReverse
+    $0.animationSpeed = 0.4
+    $0.transform = CGAffineTransform(rotationAngle: .pi * 1.72)
+  }
+  
   private lazy var camearaButton = UIButton(type: .system).then {
     $0.backgroundColor = .khuBlue
     $0.setTitle("바코드 촬영", for: .normal)
@@ -50,6 +58,16 @@ class BarcodeController: UIViewController {
     navigationController?.navigationBar.tintColor = .black
     navigationController?.navigationBar.topItem?.title = ""
     layoutSubviews()
+  }
+  
+  override func viewDidAppear(_ animated: Bool) {
+    super.viewDidAppear(animated)
+    pigTailedArrowAnimation.play()
+  }
+  
+  override func viewDidDisappear(_ animated: Bool) {
+    super.viewDidDisappear(animated)
+    pigTailedArrowAnimation.stop()
   }
   
   
@@ -79,9 +97,17 @@ class BarcodeController: UIViewController {
     
     view.addSubview(creditCardImageView)
     creditCardImageView.snp.makeConstraints { make in
-      make.center.equalToSuperview()
+      make.top.equalTo(subLabel.snp.bottom).offset(80)
+      make.centerX.equalToSuperview()
     }
   
+    view.addSubview(pigTailedArrowAnimation)
+    pigTailedArrowAnimation.play()
+    pigTailedArrowAnimation.snp.makeConstraints { make in
+      make.top.equalTo(creditCardImageView.snp.bottom).offset(-40)
+      make.leading.equalTo(creditCardImageView.snp.leading).offset(50)
+    }
+
     view.addSubview(camearaButton)
     camearaButton.snp.makeConstraints { make in
       make.leading.equalTo(self.view.safeAreaLayoutGuide.snp.leading).offset(32)
@@ -100,6 +126,4 @@ extension BarcodeController: ScannerControllerDelegate {
     let passController = PassController()
     self.navigationController?.pushViewController(passController, animated: true)
   }
-  
-  
 }

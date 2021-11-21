@@ -16,6 +16,7 @@
 		D58DE8E2274A7BE000773BBE /* PassController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D58DE8E1274A7BE000773BBE /* PassController.swift */; };
 		D58DE8E4274A805A00773BBE /* ScannerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D58DE8E3274A805A00773BBE /* ScannerController.swift */; };
 		D58DE8E7274A943F00773BBE /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = D58DE8E6274A943F00773BBE /* Lottie */; };
+		D58DE8EC274A991100773BBE /* 79064-arrows.json in Resources */ = {isa = PBXBuildFile; fileRef = D58DE8EB274A991100773BBE /* 79064-arrows.json */; };
 		D5C78D6F27451283008FAC9A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5C78D6E27451283008FAC9A /* AppDelegate.swift */; };
 		D5C78D7127451283008FAC9A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5C78D7027451283008FAC9A /* SceneDelegate.swift */; };
 		D5C78D7327451283008FAC9A /* BarcodeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5C78D7227451283008FAC9A /* BarcodeController.swift */; };
@@ -35,6 +36,7 @@
 		D58DE8DF274A795A00773BBE /* UILabel+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+Extension.swift"; sourceTree = "<group>"; };
 		D58DE8E1274A7BE000773BBE /* PassController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PassController.swift; sourceTree = "<group>"; };
 		D58DE8E3274A805A00773BBE /* ScannerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScannerController.swift; sourceTree = "<group>"; };
+		D58DE8EB274A991100773BBE /* 79064-arrows.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "79064-arrows.json"; sourceTree = "<group>"; };
 		D5C78D6B27451283008FAC9A /* KHUPASS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KHUPASS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5C78D6E27451283008FAC9A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D5C78D7027451283008FAC9A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -59,6 +61,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D58DE8E8274A969C00773BBE /* Lottie */ = {
+			isa = PBXGroup;
+			children = (
+				D58DE8EB274A991100773BBE /* 79064-arrows.json */,
+			);
+			path = Lottie;
+			sourceTree = "<group>";
+		};
 		D5C78D6227451283008FAC9A = {
 			isa = PBXGroup;
 			children = (
@@ -91,6 +101,7 @@
 		D5C78D82274515D0008FAC9A /* Support */ = {
 			isa = PBXGroup;
 			children = (
+				D58DE8E8274A969C00773BBE /* Lottie */,
 				D5E980FF274A501A00FD0A98 /* Fonts */,
 				D5C78D6E27451283008FAC9A /* AppDelegate.swift */,
 				D5C78D7027451283008FAC9A /* SceneDelegate.swift */,
@@ -229,6 +240,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D58DE8EC274A991100773BBE /* 79064-arrows.json in Resources */,
 				D58DE8D6274A58BE00773BBE /* NanumGothicOTFBold.otf in Resources */,
 				D58DE8D4274A58BE00773BBE /* NanumGothicOTFExtraBold.otf in Resources */,
 				D5C78D7B27451285008FAC9A /* LaunchScreen.storyboard in Resources */,

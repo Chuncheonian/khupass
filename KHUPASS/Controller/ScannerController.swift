@@ -63,7 +63,7 @@ class ScannerController: UIViewController {
       
     do {
       videoInput = try AVCaptureDeviceInput(device: videoCaptureDevice)
-    } catch let error {
+    } catch {
       return
     }
       
