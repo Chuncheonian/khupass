@@ -12,6 +12,8 @@
 		D5C78D7327451283008FAC9A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5C78D7227451283008FAC9A /* ViewController.swift */; };
 		D5C78D7827451285008FAC9A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D5C78D7727451285008FAC9A /* Assets.xcassets */; };
 		D5C78D7B27451285008FAC9A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D5C78D7927451285008FAC9A /* LaunchScreen.storyboard */; };
+		D5E980FB274A4BF900FD0A98 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = D5E980FA274A4BF900FD0A98 /* SnapKit */; };
+		D5E980FE274A4C0400FD0A98 /* Then in Frameworks */ = {isa = PBXBuildFile; productRef = D5E980FD274A4C0400FD0A98 /* Then */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +31,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D5E980FB274A4BF900FD0A98 /* SnapKit in Frameworks */,
+				D5E980FE274A4C0400FD0A98 /* Then in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -54,8 +58,11 @@
 		D5C78D6D27451283008FAC9A /* KHUPASS */ = {
 			isa = PBXGroup;
 			children = (
+				D5C78D8327452121008FAC9A /* Model */,
+				D5C78D842745212B008FAC9A /* View */,
+				D5C78D852745212F008FAC9A /* ViewModel */,
+				D5C78D8627452134008FAC9A /* Controller */,
 				D5C78D82274515D0008FAC9A /* Support */,
-				D5C78D7227451283008FAC9A /* ViewController.swift */,
 			);
 			path = KHUPASS;
 			sourceTree = "<group>";
@@ -70,6 +77,35 @@
 				D5C78D7C27451285008FAC9A /* Info.plist */,
 			);
 			path = Support;
+			sourceTree = "<group>";
+		};
+		D5C78D8327452121008FAC9A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		D5C78D842745212B008FAC9A /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		D5C78D852745212F008FAC9A /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		D5C78D8627452134008FAC9A /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				D5C78D7227451283008FAC9A /* ViewController.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -88,6 +124,10 @@
 			dependencies = (
 			);
 			name = KHUPASS;
+			packageProductDependencies = (
+				D5E980FA274A4BF900FD0A98 /* SnapKit */,
+				D5E980FD274A4C0400FD0A98 /* Then */,
+			);
 			productName = KHUPASS;
 			productReference = D5C78D6B27451283008FAC9A /* KHUPASS.app */;
 			productType = "com.apple.product-type.application";
@@ -116,6 +156,10 @@
 				Base,
 			);
 			mainGroup = D5C78D6227451283008FAC9A;
+			packageReferences = (
+				D5E980F9274A4BF900FD0A98 /* XCRemoteSwiftPackageReference "SnapKit" */,
+				D5E980FC274A4C0400FD0A98 /* XCRemoteSwiftPackageReference "Then" */,
+			);
 			productRefGroup = D5C78D6C27451283008FAC9A /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -283,7 +327,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = QHPW755BR8;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -300,6 +345,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.chuncheonian.KHUPASS;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = dev_KHUPASS;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -356,6 +402,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		D5E980F9274A4BF900FD0A98 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+		D5E980FC274A4C0400FD0A98 /* XCRemoteSwiftPackageReference "Then" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/devxoul/Then";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		D5E980FA274A4BF900FD0A98 /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D5E980F9274A4BF900FD0A98 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+		D5E980FD274A4C0400FD0A98 /* Then */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D5E980FC274A4C0400FD0A98 /* XCRemoteSwiftPackageReference "Then" */;
+			productName = Then;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = D5C78D6327451283008FAC9A /* Project object */;
 }
