@@ -123,7 +123,7 @@ extension BarcodeController: ScannerControllerDelegate {
   func didCompletedScan(_ controller: ScannerController, barcodeValue: String) {
     print(barcodeValue)
     controller.dismiss(animated: true, completion: nil)
-    let passController = PassController()
+    let passController = PassController(barcodeValue: barcodeValue)
     self.navigationController?.pushViewController(passController, animated: true)
   }
 }
