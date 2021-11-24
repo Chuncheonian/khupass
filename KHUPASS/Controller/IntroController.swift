@@ -13,6 +13,11 @@ class IntroController: UIViewController {
   
   // MARK: - Properties
   
+  private let logoImageView = UIImageView().then {
+    $0.image = UIImage(named: "logo-2")
+    $0.contentMode = .scaleAspectFill
+  }
+  
   private lazy var startButton = UIButton(type: .system).then {
     $0.backgroundColor = .khuBlue
     $0.setTitle("시작하기", for: .normal)
@@ -44,6 +49,12 @@ class IntroController: UIViewController {
   // MARK: - Helpers
   
   private func layoutSubviews() {
+    view.addSubview(logoImageView)
+    logoImageView.snp.makeConstraints { make in
+      make.top.equalTo(self.view.safeAreaLayoutGuide.snp.top)
+      make.centerX.equalToSuperview()
+    }
+    
     view.addSubview(startButton)
     startButton.snp.makeConstraints { make in
       make.leading.equalTo(self.view.safeAreaLayoutGuide.snp.leading).offset(32)
