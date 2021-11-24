@@ -13,6 +13,20 @@ class PassController: UIViewController {
   // MARK: - Properties
   
   private let barcodeValue: String
+  
+  private let titleLabel = UILabel().then {
+    $0.text = "패스가 생성되었습니다."
+    $0.font = UIFont.nanumGothic(size: 25, family: .extrabold)
+  }
+  
+  private let subLabel = UILabel().then {
+    $0.text = "Apple Wallet에 보관하기 위해\n아래의 버튼을 클릭해주세요."
+    $0.font = UIFont.nanumGothic(size: 14, family: .bold)
+    $0.numberOfLines = 0
+    $0.setLinespace(spacing: 6)
+    $0.textColor = .init(white: 0, alpha: 0.6)
+  }
+  
   private let passButton = PKAddPassButton()
   
   // MARK: - Lifecycle
@@ -30,15 +44,7 @@ class PassController: UIViewController {
     super.viewDidLoad()
     view.backgroundColor = .white
     navigationController?.navigationBar.topItem?.title = ""
-    
-    view.addSubview(passButton)
-    passButton.addTarget(self, action: #selector(addCredential), for: .touchUpInside)
-    passButton.snp.makeConstraints { make in
-      make.leading.equalTo(self.view.safeAreaLayoutGuide.snp.leading).offset(32)
-      make.bottom.equalTo(self.view.safeAreaLayoutGuide.snp.bottom).offset(-40)
-      make.trailing.equalTo(self.view.safeAreaLayoutGuide.snp.trailing).offset(-32)
-      make.height.equalTo(50)
-    }
+    layoutSubviews()
   }
   
   // MARK: - Action
@@ -74,6 +80,31 @@ class PassController: UIViewController {
       }
     })
     task.resume()
+  }
+  
+  // MARK: - Helper
+  
+  private func layoutSubviews() {
+    view.addSubview(titleLabel)
+    titleLabel.snp.makeConstraints { make in
+      make.top.equalTo(self.view.safeAreaLayoutGuide.snp.top).offset(14)
+      make.leading.equalTo(self.view.safeAreaLayoutGuide.snp.leading).offset(16)
+    }
+    
+    view.addSubview(subLabel)
+    subLabel.snp.makeConstraints { make in
+      make.top.equalTo(titleLabel.snp.bottom).offset(20)
+      make.leading.equalTo(titleLabel.snp.leading)
+    }
+    
+    view.addSubview(passButton)
+    passButton.addTarget(self, action: #selector(addCredential), for: .touchUpInside)
+    passButton.snp.makeConstraints { make in
+      make.leading.equalTo(self.view.safeAreaLayoutGuide.snp.leading).offset(32)
+      make.bottom.equalTo(self.view.safeAreaLayoutGuide.snp.bottom).offset(-40)
+      make.trailing.equalTo(self.view.safeAreaLayoutGuide.snp.trailing).offset(-32)
+      make.height.equalTo(50)
+    }
   }
 }
 
