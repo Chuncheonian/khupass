@@ -78,7 +78,7 @@ class ScannerController: UIViewController {
     if self.captureSession.canAddOutput(metadataOutput) {
       self.captureSession.addOutput(metadataOutput)
       metadataOutput.setMetadataObjectsDelegate(self, queue: DispatchQueue.main)
-      metadataOutput.metadataObjectTypes = [.code39]
+      metadataOutput.metadataObjectTypes = [.code39, .code128]
     } else {
       return
     }
