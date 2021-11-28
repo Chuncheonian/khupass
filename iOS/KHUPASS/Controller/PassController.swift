@@ -50,7 +50,7 @@ class PassController: UIViewController {
   // MARK: - Action
   
   @objc func addCredential() {
-    let url: URL! = URL(string: "http://localhost:8080/scratch/\(barcodeValue)")
+    let url: URL! = URL(string: "https://evdcsnsv57.execute-api.ap-northeast-2.amazonaws.com/?barcodeValue=\(barcodeValue)")
     let request: URLRequest = URLRequest(url: url as URL)
     let config = URLSessionConfiguration.default
     let session = URLSession(configuration: config)
