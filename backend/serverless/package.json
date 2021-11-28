@@ -1,0 +1,20 @@
+{
+  "name": "khupass-serverless",
+  "version": "1.0.0",
+  "description": "",
+  "private": true,
+  "main": "handler.js",
+  "author": "Dongyoung Kwon <ehddud2468@gmail.com>",
+  "scripts": {
+    "build": "npx tsc"
+  },
+  "license": "ISC",
+  "dependencies": {
+    "passkit-generator": "^3.0.1"
+  },
+  "devDependencies": {
+    "@types/aws-lambda": "^8.10.85",
+    "@types/node": "^16.11.10",
+    "typescript": "^4.5.2"
+  }
+}
