@@ -191,9 +191,10 @@ async function getS3Instance() {
 		return S3.instance;
 	}
   console.log("Creating S3 instance");
+
   const instance = new AWS.S3({
     s3ForcePathStyle: true,
-    accessKeyId: process.env.IS_OFFLINE ? "S3RVER" : config.AWS_ACCESS_KEY_ID, // This specific key is required when working offline
+    accessKeyId: config.AWS_ACCESS_KEY_ID,
     secretAccessKey: config.AWS_SECRET_ACCESS_KEY,
     region: config.AWS_REGION,
     endpoint: new AWS.Endpoint(config.AWS_S3_ENDPOINT),
