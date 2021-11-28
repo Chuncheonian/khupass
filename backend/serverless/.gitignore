@@ -4,3 +4,9 @@ jspm_packages
 
 # Serverless directories
 .serverless
+
+# Resources
+certificates
+static
+config.json
+handler.js

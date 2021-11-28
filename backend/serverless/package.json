@@ -10,6 +10,7 @@
   },
   "license": "ISC",
   "dependencies": {
+    "aws-sdk": "^2.1037.0",
     "passkit-generator": "^3.0.1"
   },
   "devDependencies": {
