@@ -1,0 +1,12 @@
+{
+	"compilerOptions": {
+		"target": "ESNext",
+		"module": "CommonJS",
+		"outDir": "build",
+    "esModuleInterop": true,
+		"moduleResolution": "node",
+		"sourceMap": true,
+    "importHelpers": true
+	},
+	"exclude": ["node_modules"]
+}
