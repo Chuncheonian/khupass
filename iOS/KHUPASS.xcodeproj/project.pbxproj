@@ -401,7 +401,8 @@
 				DEVELOPMENT_TEAM = QHPW755BR8;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = KHUPASS/Support/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = "KHU Pass";
+				INFOPLIST_KEY_CFBundleDisplayName = "KHU PASS";
+				INFOPLIST_KEY_NSCameraUsageDescription = "바코드 촬영을 위해 카메라 권한이 필요합니다.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -430,7 +431,8 @@
 				DEVELOPMENT_TEAM = QHPW755BR8;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = KHUPASS/Support/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = "KHU Pass";
+				INFOPLIST_KEY_CFBundleDisplayName = "KHU PASS";
+				INFOPLIST_KEY_NSCameraUsageDescription = "바코드 촬영을 위해 카메라 권한이 필요합니다.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
