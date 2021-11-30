@@ -61,7 +61,7 @@ class PassController: UIViewController {
 
         if passLibrary.containsPass(pass) {
           DispatchQueue.main.sync {
-//            self?.mostrarAlerta(title: "Crendencial repetida", message: "이미 발급되었습니다. 지갑에서 확인해주세요.")
+            self?.showAlert(title: "오류", message: "이미 발급되었습니다. 지갑에서 확인해주세요.")
           }
         } else {
           if let pkvc = PKAddPassesViewController(pass: pass){
@@ -71,12 +71,12 @@ class PassController: UIViewController {
             }
           } else {
             DispatchQueue.main.sync {
-//              self?.mostrarAlerta(title: "장치가 허용되지 않음", message: "아이폰에서만 작동됩니다.")
+              self?.showAlert(title: "오류", message: "iPhone에서만 작동됩니다.")
             }
           }
         }
       } catch {
-//        self?.mostrarAlerta(title: "ERROR", message: "Pass를 로드하지 못했습니다.")
+        self?.showAlert(title: "오류", message: "Pass를 로드하지 못했습니다.")
       }
     })
     task.resume()
@@ -105,6 +105,13 @@ class PassController: UIViewController {
       make.trailing.equalTo(self.view.safeAreaLayoutGuide.snp.trailing).offset(-32)
       make.height.equalTo(50)
     }
+  }
+  
+  func showAlert(title: String, message: String) {
+    let alertVC = UIAlertController(title: title, message: message, preferredStyle: .alert)
+    let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+    alertVC.addAction(okAction)
+    self.present(alertVC, animated: true, completion: nil)
   }
 }
 
