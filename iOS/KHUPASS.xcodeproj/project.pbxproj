@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D566D9CB2756588100B14771 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D566D9CA2756588100B14771 /* Constants.swift */; };
 		D57BEC0D274DFE5B00E65966 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D57BEC0C274DFE5B00E65966 /* UIColor+Extension.swift */; };
 		D58DE8D4274A58BE00773BBE /* NanumGothicOTFExtraBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = D58DE8D1274A58BD00773BBE /* NanumGothicOTFExtraBold.otf */; };
 		D58DE8D5274A58BE00773BBE /* NanumGothicOTF.otf in Resources */ = {isa = PBXBuildFile; fileRef = D58DE8D2274A58BE00773BBE /* NanumGothicOTF.otf */; };
@@ -28,6 +29,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D566D9CA2756588100B14771 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		D57BEC0C274DFE5B00E65966 /* UIColor+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 		D58DE8D1274A58BD00773BBE /* NanumGothicOTFExtraBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = NanumGothicOTFExtraBold.otf; path = NanumGothic/NanumGothicOTFExtraBold.otf; sourceTree = "<group>"; };
 		D58DE8D2274A58BE00773BBE /* NanumGothicOTF.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = NanumGothicOTF.otf; path = NanumGothic/NanumGothicOTF.otf; sourceTree = "<group>"; };
@@ -149,6 +151,7 @@
 		D5E98107274A519D00FD0A98 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				D566D9CA2756588100B14771 /* Constants.swift */,
 				D5E98108274A51B500FD0A98 /* Extensions */,
 			);
 			path = Utils;
@@ -253,6 +256,7 @@
 				D57BEC0D274DFE5B00E65966 /* UIColor+Extension.swift in Sources */,
 				D58DE8DE274A6F4D00773BBE /* IntroController.swift in Sources */,
 				D5C78D6F27451283008FAC9A /* AppDelegate.swift in Sources */,
+				D566D9CB2756588100B14771 /* Constants.swift in Sources */,
 				D58DE8E0274A795A00773BBE /* UILabel+Extension.swift in Sources */,
 				D58DE8E2274A7BE000773BBE /* PassController.swift in Sources */,
 				D5E9810A274A51C300FD0A98 /* UIFont+Extension.swift in Sources */,
