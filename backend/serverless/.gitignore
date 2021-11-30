@@ -7,6 +7,5 @@ jspm_packages
 
 # Resources
 certificates
-static
 config.json
 handler.js
