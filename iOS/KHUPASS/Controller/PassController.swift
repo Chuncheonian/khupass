@@ -64,7 +64,7 @@ class PassController: UIViewController {
             self?.showAlert(title: "오류", message: "이미 발급되었습니다. 지갑에서 확인해주세요.")
           }
         } else {
-          if let pkvc = PKAddPassesViewController(pass: pass){
+          if let pkvc = PKAddPassesViewController(pass: pass) {
             pkvc.delegate = self
             DispatchQueue.main.sync {
               self?.navigationController?.present(pkvc, animated: true)
