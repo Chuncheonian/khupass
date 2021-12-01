@@ -18,6 +18,8 @@
 		D58DE8E4274A805A00773BBE /* ScannerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D58DE8E3274A805A00773BBE /* ScannerController.swift */; };
 		D58DE8E7274A943F00773BBE /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = D58DE8E6274A943F00773BBE /* Lottie */; };
 		D58DE8EC274A991100773BBE /* 79064-arrows.json in Resources */ = {isa = PBXBuildFile; fileRef = D58DE8EB274A991100773BBE /* 79064-arrows.json */; };
+		D5C005BA275791F900151A27 /* CompletedController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5C005B9275791F900151A27 /* CompletedController.swift */; };
+		D5C005BC2757942B00151A27 /* 972-done.json in Resources */ = {isa = PBXBuildFile; fileRef = D5C005BB2757942B00151A27 /* 972-done.json */; };
 		D5C78D6F27451283008FAC9A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5C78D6E27451283008FAC9A /* AppDelegate.swift */; };
 		D5C78D7127451283008FAC9A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5C78D7027451283008FAC9A /* SceneDelegate.swift */; };
 		D5C78D7327451283008FAC9A /* BarcodeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5C78D7227451283008FAC9A /* BarcodeController.swift */; };
@@ -39,6 +41,8 @@
 		D58DE8E1274A7BE000773BBE /* PassController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PassController.swift; sourceTree = "<group>"; };
 		D58DE8E3274A805A00773BBE /* ScannerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScannerController.swift; sourceTree = "<group>"; };
 		D58DE8EB274A991100773BBE /* 79064-arrows.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "79064-arrows.json"; sourceTree = "<group>"; };
+		D5C005B9275791F900151A27 /* CompletedController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompletedController.swift; sourceTree = "<group>"; };
+		D5C005BB2757942B00151A27 /* 972-done.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "972-done.json"; sourceTree = "<group>"; };
 		D5C78D6B27451283008FAC9A /* KHUPASS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KHUPASS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5C78D6E27451283008FAC9A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D5C78D7027451283008FAC9A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -74,6 +78,7 @@
 			isa = PBXGroup;
 			children = (
 				D58DE8EB274A991100773BBE /* 79064-arrows.json */,
+				D5C005BB2757942B00151A27 /* 972-done.json */,
 			);
 			path = Lottie;
 			sourceTree = "<group>";
@@ -134,6 +139,7 @@
 				D5C78D7227451283008FAC9A /* BarcodeController.swift */,
 				D58DE8E3274A805A00773BBE /* ScannerController.swift */,
 				D58DE8E1274A7BE000773BBE /* PassController.swift */,
+				D5C005B9275791F900151A27 /* CompletedController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -238,6 +244,7 @@
 				D58DE8EC274A991100773BBE /* 79064-arrows.json in Resources */,
 				D58DE8D6274A58BE00773BBE /* NanumGothicOTFBold.otf in Resources */,
 				D58DE8D4274A58BE00773BBE /* NanumGothicOTFExtraBold.otf in Resources */,
+				D5C005BC2757942B00151A27 /* 972-done.json in Resources */,
 				D5C78D7B27451285008FAC9A /* LaunchScreen.storyboard in Resources */,
 				D58DE8D5274A58BE00773BBE /* NanumGothicOTF.otf in Resources */,
 				D5C78D7827451285008FAC9A /* Assets.xcassets in Resources */,
@@ -255,6 +262,7 @@
 				D5C78D7327451283008FAC9A /* BarcodeController.swift in Sources */,
 				D57BEC0D274DFE5B00E65966 /* UIColor+Extension.swift in Sources */,
 				D58DE8DE274A6F4D00773BBE /* IntroController.swift in Sources */,
+				D5C005BA275791F900151A27 /* CompletedController.swift in Sources */,
 				D5C78D6F27451283008FAC9A /* AppDelegate.swift in Sources */,
 				D566D9CB2756588100B14771 /* Constants.swift in Sources */,
 				D58DE8E0274A795A00773BBE /* UILabel+Extension.swift in Sources */,

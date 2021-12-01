@@ -26,7 +26,7 @@ class IntroController: UIViewController {
     $0.alpha = 0.0
     $0.textColor = .init(white: 0, alpha: 0.8)
     $0.textAlignment = .center
-    $0.font = UIFont.nanumGothic(size: 33, family: .extrabold)
+    $0.font = UIFont.nanumGothic(size: 30, family: .extrabold)
   }
   
   private lazy var startButton = UIButton(type: .system).then {

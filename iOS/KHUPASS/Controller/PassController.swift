@@ -119,6 +119,10 @@ class PassController: UIViewController {
 
 extension PassController: PKAddPassesViewControllerDelegate {
   func addPassesViewControllerDidFinish(_ controller: PKAddPassesViewController) {
-    controller.dismiss(animated: true, completion: nil)
+    controller.dismiss(animated: true) {
+      let completedVC = CompletedController()
+      self.navigationController?.pushViewController(completedVC, animated: true)
+    }
+
   }
 }
