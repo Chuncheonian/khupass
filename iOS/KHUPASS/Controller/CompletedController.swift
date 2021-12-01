@@ -23,6 +23,13 @@ class CompletedController: UIViewController {
     $0.alpha = 0.0
   }
   
+  private let descriptionLabel = UILabel().then {
+    $0.text = "발급된 패스는 '지갑' 앱에서 확인할 수 있습니다."
+    $0.font = UIFont.nanumGothic(size: 14, family: .bold)
+    $0.textColor = .init(white: 0, alpha: 0.6)
+    $0.alpha = 0.0
+  }
+  
   // MARK: - Lifecycle
   
   override func viewDidLoad() {
@@ -40,24 +47,29 @@ class CompletedController: UIViewController {
   // MARK: - Helper
   
   private func layoutSubviews() {
+    view.addSubview(titleLabel)
+    titleLabel.snp.makeConstraints { make in
+      make.center.equalToSuperview()
+    }
+    
     view.addSubview(doneAnimation)
     doneAnimation.play()
     doneAnimation.snp.makeConstraints { make in
       make.centerX.equalToSuperview()
-      make.centerY.equalToSuperview().offset(-90)
+      make.bottom.equalTo(titleLabel.snp.top).offset(-15)
     }
     
-    view.addSubview(titleLabel)
-    titleLabel.snp.makeConstraints { make in
-      make.top.equalTo(self.doneAnimation.snp.bottom).offset(20)
+    view.addSubview(descriptionLabel)
+    descriptionLabel.snp.makeConstraints { make in
       make.centerX.equalToSuperview()
+      make.top.equalTo(self.titleLabel.snp.bottom).offset(20)
     }
   }
   
   private func animator() {
     UIViewPropertyAnimator(duration: 0, curve: .linear) {
       self.titleLabel.alpha = 1.0
-    }.startAnimation(afterDelay: 1.1)
+      self.descriptionLabel.alpha = 1.0
+    }.startAnimation(afterDelay: 1.2)
   }
-  
 }
