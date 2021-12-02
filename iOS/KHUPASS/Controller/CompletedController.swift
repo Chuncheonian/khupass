@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import StoreKit
 import Lottie
 
 class CompletedController: UIViewController {
@@ -35,13 +36,37 @@ class CompletedController: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     view.backgroundColor = .white
+    navigationController?.navigationBar.tintColor = .black
     navigationItem.hidesBackButton = true
+    navigationItem.rightBarButtonItem = UIBarButtonItem(
+      image: UIImage(systemName: "ellipsis"),
+      style: .plain,
+      target: self,
+      action: #selector(didTapBarButton)
+    )
+    
+    // 리뷰 요청
+    if #available(iOS 14.0, *) {
+      if let scene = UIApplication.shared.connectedScenes.first(where: { $0.activationState == .foregroundActive }) as? UIWindowScene {
+        SKStoreReviewController.requestReview(in: scene)
+      }
+    } else {
+      SKStoreReviewController.requestReview()
+    }
+    
     layoutSubviews()
   }
   
   override func viewDidAppear(_ animated: Bool) {
     super.viewDidAppear(animated)
     animator()
+  }
+  
+  // MARK: - Action
+  
+  @objc private func didTapBarButton() {
+    let controller = SettingController()
+    self.present(controller, animated: true, completion: nil)
   }
   
   // MARK: - Helper

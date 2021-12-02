@@ -20,6 +20,7 @@
 		D58DE8EC274A991100773BBE /* 79064-arrows.json in Resources */ = {isa = PBXBuildFile; fileRef = D58DE8EB274A991100773BBE /* 79064-arrows.json */; };
 		D5C005BA275791F900151A27 /* CompletedController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5C005B9275791F900151A27 /* CompletedController.swift */; };
 		D5C005BC2757942B00151A27 /* 972-done.json in Resources */ = {isa = PBXBuildFile; fileRef = D5C005BB2757942B00151A27 /* 972-done.json */; };
+		D5C005BE2757A56A00151A27 /* SettingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5C005BD2757A56A00151A27 /* SettingController.swift */; };
 		D5C78D6F27451283008FAC9A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5C78D6E27451283008FAC9A /* AppDelegate.swift */; };
 		D5C78D7127451283008FAC9A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5C78D7027451283008FAC9A /* SceneDelegate.swift */; };
 		D5C78D7327451283008FAC9A /* BarcodeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5C78D7227451283008FAC9A /* BarcodeController.swift */; };
@@ -31,6 +32,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D51ED1052758F69C004BF3B6 /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		D566D9CA2756588100B14771 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		D57BEC0C274DFE5B00E65966 /* UIColor+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 		D58DE8D1274A58BD00773BBE /* NanumGothicOTFExtraBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = NanumGothicOTFExtraBold.otf; path = NanumGothic/NanumGothicOTFExtraBold.otf; sourceTree = "<group>"; };
@@ -43,6 +45,7 @@
 		D58DE8EB274A991100773BBE /* 79064-arrows.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "79064-arrows.json"; sourceTree = "<group>"; };
 		D5C005B9275791F900151A27 /* CompletedController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompletedController.swift; sourceTree = "<group>"; };
 		D5C005BB2757942B00151A27 /* 972-done.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "972-done.json"; sourceTree = "<group>"; };
+		D5C005BD2757A56A00151A27 /* SettingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingController.swift; sourceTree = "<group>"; };
 		D5C78D6B27451283008FAC9A /* KHUPASS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KHUPASS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5C78D6E27451283008FAC9A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D5C78D7027451283008FAC9A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -140,6 +143,7 @@
 				D58DE8E3274A805A00773BBE /* ScannerController.swift */,
 				D58DE8E1274A7BE000773BBE /* PassController.swift */,
 				D5C005B9275791F900151A27 /* CompletedController.swift */,
+				D5C005BD2757A56A00151A27 /* SettingController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -220,6 +224,7 @@
 			knownRegions = (
 				en,
 				Base,
+				ko,
 			);
 			mainGroup = D5C78D6227451283008FAC9A;
 			packageReferences = (
@@ -258,6 +263,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D5C005BE2757A56A00151A27 /* SettingController.swift in Sources */,
 				D58DE8E4274A805A00773BBE /* ScannerController.swift in Sources */,
 				D5C78D7327451283008FAC9A /* BarcodeController.swift in Sources */,
 				D57BEC0D274DFE5B00E65966 /* UIColor+Extension.swift in Sources */,
@@ -279,6 +285,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				D5C78D7A27451285008FAC9A /* Base */,
+				D51ED1052758F69C004BF3B6 /* ko */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -290,6 +297,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
@@ -337,7 +345,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -351,6 +359,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
@@ -392,7 +401,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -417,8 +426,10 @@
 				INFOPLIST_KEY_NSCameraUsageDescription = "바코드 촬영을 위해 카메라 권한이 필요합니다.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -447,8 +458,10 @@
 				INFOPLIST_KEY_NSCameraUsageDescription = "바코드 촬영을 위해 카메라 권한이 필요합니다.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

@@ -15,7 +15,7 @@ class PassController: UIViewController {
   private let barcodeValue: String
   
   private let titleLabel = UILabel().then {
-    $0.text = "패스가 생성되었습니다."
+    $0.text = "스캔이 완료되었습니다."
     $0.font = UIFont.nanumGothic(size: 25, family: .extrabold)
   }
   
@@ -25,6 +25,11 @@ class PassController: UIViewController {
     $0.numberOfLines = 0
     $0.setLinespace(spacing: 6)
     $0.textColor = .init(white: 0, alpha: 0.6)
+  }
+  
+  private let passImageView = UIImageView().then {
+    $0.image = UIImage(named: "pass")
+    $0.contentMode = .scaleAspectFill
   }
   
   private let passButton = PKAddPassButton()
@@ -95,6 +100,12 @@ class PassController: UIViewController {
     subLabel.snp.makeConstraints { make in
       make.top.equalTo(titleLabel.snp.bottom).offset(20)
       make.leading.equalTo(titleLabel.snp.leading)
+    }
+    
+    view.addSubview(passImageView)
+    passImageView.snp.makeConstraints { make in
+      make.centerX.equalToSuperview()
+      make.top.equalTo(subLabel.snp.bottom).offset(20)
     }
     
     view.addSubview(passButton)
