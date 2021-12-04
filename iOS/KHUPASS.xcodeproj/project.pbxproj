@@ -18,6 +18,7 @@
 		D58DE8E4274A805A00773BBE /* ScannerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D58DE8E3274A805A00773BBE /* ScannerController.swift */; };
 		D58DE8E7274A943F00773BBE /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = D58DE8E6274A943F00773BBE /* Lottie */; };
 		D58DE8EC274A991100773BBE /* 79064-arrows.json in Resources */ = {isa = PBXBuildFile; fileRef = D58DE8EB274A991100773BBE /* 79064-arrows.json */; };
+		D5A8E181275B8FC100101831 /* NVActivityIndicatorView in Frameworks */ = {isa = PBXBuildFile; productRef = D5A8E180275B8FC100101831 /* NVActivityIndicatorView */; };
 		D5C005BA275791F900151A27 /* CompletedController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5C005B9275791F900151A27 /* CompletedController.swift */; };
 		D5C005BC2757942B00151A27 /* 972-done.json in Resources */ = {isa = PBXBuildFile; fileRef = D5C005BB2757942B00151A27 /* 972-done.json */; };
 		D5C005BE2757A56A00151A27 /* SettingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5C005BD2757A56A00151A27 /* SettingController.swift */; };
@@ -61,6 +62,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D5A8E181275B8FC100101831 /* NVActivityIndicatorView in Frameworks */,
 				D5E980FB274A4BF900FD0A98 /* SnapKit in Frameworks */,
 				D5E980FE274A4C0400FD0A98 /* Then in Frameworks */,
 				D58DE8E7274A943F00773BBE /* Lottie in Frameworks */,
@@ -197,6 +199,7 @@
 				D5E980FA274A4BF900FD0A98 /* SnapKit */,
 				D5E980FD274A4C0400FD0A98 /* Then */,
 				D58DE8E6274A943F00773BBE /* Lottie */,
+				D5A8E180275B8FC100101831 /* NVActivityIndicatorView */,
 			);
 			productName = KHUPASS;
 			productReference = D5C78D6B27451283008FAC9A /* KHUPASS.app */;
@@ -231,6 +234,7 @@
 				D5E980F9274A4BF900FD0A98 /* XCRemoteSwiftPackageReference "SnapKit" */,
 				D5E980FC274A4C0400FD0A98 /* XCRemoteSwiftPackageReference "Then" */,
 				D58DE8E5274A943F00773BBE /* XCRemoteSwiftPackageReference "lottie-ios" */,
+				D5A8E17F275B8FC100101831 /* XCRemoteSwiftPackageReference "NVActivityIndicatorView" */,
 			);
 			productRefGroup = D5C78D6C27451283008FAC9A /* Products */;
 			projectDirPath = "";
@@ -507,6 +511,14 @@
 				minimumVersion = 3.0.0;
 			};
 		};
+		D5A8E17F275B8FC100101831 /* XCRemoteSwiftPackageReference "NVActivityIndicatorView" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ninjaprox/NVActivityIndicatorView";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
 		D5E980F9274A4BF900FD0A98 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/SnapKit/SnapKit";
@@ -530,6 +542,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = D58DE8E5274A943F00773BBE /* XCRemoteSwiftPackageReference "lottie-ios" */;
 			productName = Lottie;
+		};
+		D5A8E180275B8FC100101831 /* NVActivityIndicatorView */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D5A8E17F275B8FC100101831 /* XCRemoteSwiftPackageReference "NVActivityIndicatorView" */;
+			productName = NVActivityIndicatorView;
 		};
 		D5E980FA274A4BF900FD0A98 /* SnapKit */ = {
 			isa = XCSwiftPackageProductDependency;

@@ -7,6 +7,7 @@
 
 import UIKit
 import PassKit
+import NVActivityIndicatorView
 
 class PassController: UIViewController {
 
@@ -34,6 +35,13 @@ class PassController: UIViewController {
   
   private let passButton = PKAddPassButton()
   
+  private let indicator = NVActivityIndicatorView(
+    frame: CGRect(x: 0, y: 0, width: 50, height: 50),
+    type: .circleStrokeSpin,
+    color: .black,
+    padding: 0
+  )
+  
   // MARK: - Lifecycle
   
   init(barcodeValue: String) {
@@ -59,8 +67,15 @@ class PassController: UIViewController {
     let request: URLRequest = URLRequest(url: url as URL)
     let config = URLSessionConfiguration.default
     let session = URLSession(configuration: config)
+    
+    indicator.startAnimating()
+    
     let task : URLSessionDataTask = session.dataTask(with: request as URLRequest, completionHandler: {[weak self] (data, response, error) in
       do {
+        DispatchQueue.main.sync {
+          self?.indicator.stopAnimating()
+        }
+        
         let pass = try PKPass(data: data ?? Data())
         let passLibrary = PKPassLibrary()
 
@@ -81,6 +96,9 @@ class PassController: UIViewController {
           }
         }
       } catch {
+        DispatchQueue.main.sync {
+          self?.indicator.stopAnimating()
+        }
         self?.showAlert(title: "오류", message: "Pass를 로드하지 못했습니다.")
       }
     })
@@ -116,6 +134,11 @@ class PassController: UIViewController {
       make.trailing.equalTo(self.view.safeAreaLayoutGuide.snp.trailing).offset(-32)
       make.height.equalTo(50)
     }
+    
+    view.addSubview(indicator)
+    indicator.snp.makeConstraints { make in
+      make.center.equalToSuperview()
+    }
   }
   
   func showAlert(title: String, message: String) {
@@ -134,6 +157,5 @@ extension PassController: PKAddPassesViewControllerDelegate {
       let completedVC = CompletedController()
       self.navigationController?.pushViewController(completedVC, animated: true)
     }
-
   }
 }
