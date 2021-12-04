@@ -80,7 +80,7 @@ export async function generatePass(event: ALBEvent) {
 		{
 			key: "back-role",
 			label: "유의사항",
-			value: "이 패스는 경희대학교 공식적으로 발급된 것이 아닙니다.",
+			value: "이 패스는 경희대학교 공식적으로 발급된 것이 아닙니다. 실제 사용 시 정상적으로 인식이 안 되거나, 사용을 거부당할 수도 있습니다.",
 		},
 		{
 			key: "back-studentID",
