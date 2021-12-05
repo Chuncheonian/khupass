@@ -123,7 +123,7 @@ class PassController: UIViewController {
     view.addSubview(passImageView)
     passImageView.snp.makeConstraints { make in
       make.centerX.equalToSuperview()
-      make.top.equalTo(subLabel.snp.bottom).offset(20)
+      make.top.equalTo(subLabel.snp.bottom).offset(25)
     }
     
     view.addSubview(passButton)
