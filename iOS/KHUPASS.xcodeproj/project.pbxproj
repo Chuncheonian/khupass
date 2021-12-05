@@ -21,7 +21,6 @@
 		D5A8E181275B8FC100101831 /* NVActivityIndicatorView in Frameworks */ = {isa = PBXBuildFile; productRef = D5A8E180275B8FC100101831 /* NVActivityIndicatorView */; };
 		D5C005BA275791F900151A27 /* CompletedController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5C005B9275791F900151A27 /* CompletedController.swift */; };
 		D5C005BC2757942B00151A27 /* 972-done.json in Resources */ = {isa = PBXBuildFile; fileRef = D5C005BB2757942B00151A27 /* 972-done.json */; };
-		D5C005BE2757A56A00151A27 /* SettingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5C005BD2757A56A00151A27 /* SettingController.swift */; };
 		D5C78D6F27451283008FAC9A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5C78D6E27451283008FAC9A /* AppDelegate.swift */; };
 		D5C78D7127451283008FAC9A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5C78D7027451283008FAC9A /* SceneDelegate.swift */; };
 		D5C78D7327451283008FAC9A /* BarcodeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5C78D7227451283008FAC9A /* BarcodeController.swift */; };
@@ -47,7 +46,6 @@
 		D58DE8EB274A991100773BBE /* 79064-arrows.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "79064-arrows.json"; sourceTree = "<group>"; };
 		D5C005B9275791F900151A27 /* CompletedController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompletedController.swift; sourceTree = "<group>"; };
 		D5C005BB2757942B00151A27 /* 972-done.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "972-done.json"; sourceTree = "<group>"; };
-		D5C005BD2757A56A00151A27 /* SettingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingController.swift; sourceTree = "<group>"; };
 		D5C78D6B27451283008FAC9A /* KHUPASS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KHUPASS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5C78D6E27451283008FAC9A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D5C78D7027451283008FAC9A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -145,7 +143,6 @@
 				D58DE8E3274A805A00773BBE /* ScannerController.swift */,
 				D58DE8E1274A7BE000773BBE /* PassController.swift */,
 				D5C005B9275791F900151A27 /* CompletedController.swift */,
-				D5C005BD2757A56A00151A27 /* SettingController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -266,7 +263,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D5C005BE2757A56A00151A27 /* SettingController.swift in Sources */,
 				D58DE8E4274A805A00773BBE /* ScannerController.swift in Sources */,
 				D5C78D7327451283008FAC9A /* BarcodeController.swift in Sources */,
 				D57BEC0D274DFE5B00E65966 /* UIColor+Extension.swift in Sources */,
