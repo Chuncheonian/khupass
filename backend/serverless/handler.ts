@@ -18,6 +18,7 @@ export async function generatePass(event: ALBEvent) {
 			serialNumber: event.queryStringParameters.barcodeValue,
 			organizationName: "KHU PASS",
 			teamIdentifier: config.TEAM_IDENTIFIER,
+      associatedStoreIdentifiers: [1598848741],
 			logoText: "KHU PASS",
 			foregroundColor: "rgb(255, 255, 255)",
 			labelColor: "rgb(13, 50, 111)",

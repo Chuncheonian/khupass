@@ -84,6 +84,7 @@ app.route("/:barcodeValue").get(async (request, response) => {
         serialNumber: request.params.barcodeValue,
         organizationName: "KHU PASS",
         teamIdentifier: process.env.TEAM_IDENTIFIER,
+        associatedStoreIdentifiers: [1598848741],
         logoText: "KHU PASS",
         foregroundColor: "rgb(255, 255, 255)",
         labelColor: "rgb(13, 50, 111)",
