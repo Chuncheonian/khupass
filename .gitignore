@@ -1,12 +1,4 @@
-# Created by https://www.toptal.com/developers/gitignore/api/swift,xcode,cocoapods
-# Edit at https://www.toptal.com/developers/gitignore?templates=swift,xcode,cocoapods
-
-### CocoaPods ###
-## CocoaPods GitIgnore Template
-
-# CocoaPods - Only use to conserve bandwidth / Save time on Pushing
-#           - Also handy if you have a large number of dependant pods
-#           - AS PER https://guides.cocoapods.org/using/using-cocoapods.html NEVER IGNORE THE LOCK FILE
+# CocoaPods
 Pods/
 
 ### Swift ###
@@ -98,9 +90,6 @@ iOSInjectionProject/
 # Xcode
 # gitignore contributors: remember to update Global/Xcode.gitignore, Objective-C.gitignore & Swift.gitignore
 
-
-#.DS_Store
-
 ## Gcc Patch
 /*.gcno
 
@@ -112,5 +101,31 @@ iOSInjectionProject/
 **/xcshareddata/WorkspaceSettings.xcsettings
 
 GoogleService-Info.plist
+Constants.swift
 
-# End of https://www.toptal.com/developers/gitignore/api/swift,xcode,cocoapods
+# dependencies
+node_modules
+/.pnp
+.pnp.js
+
+# certificates
+certificates
+
+# testing
+coverage
+
+# production
+build
+
+# misc
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+.eslintcache
+
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+

@@ -1,0 +1,17 @@
+service: khupass-serverless
+frameworkVersion: '2 || 3'
+
+provider:
+  name: aws
+  region: ap-northeast-2
+  stage: dev
+  runtime: nodejs14.x
+  lambdaHashingVersion: '20201221'
+
+functions:
+  generatePass:
+    handler: handler.generatePass
+    events:
+      - httpApi:
+          path: /
+          method: get
