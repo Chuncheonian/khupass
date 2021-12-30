@@ -1,4 +1,4 @@
-<img src=".github/app-icon.png" width="170" alt="App icon" align="left"/>
+<img src=".github/app-icon.png" width="200" alt="App icon" align="left"/>
 
 <div>
 <h2>KHU PASS - 경희대학생을 위한 쉽고 편리한 도서관 출입 </h2>
@@ -17,10 +17,14 @@
   <br>
   <br>
 
-<!-- shields -->
-<!-- version -->
+  <!-- shields -->
+  <!-- version -->
   <a href="https://github.com/Chuncheonian/khupass/releases">
     <img src="https://img.shields.io/github/release-pre/Chuncheonian/khupass.svg?style=flat" alt="latest version"/>
+  </a>
+  <!-- license -->
+  <a href="https://github.com/Chuncheonian/khupass/blob/master/License.txt">
+    <img src="https://img.shields.io/github/license/Chuncheonian/khupass.svg?style=flat" alt="license"/>
   </a>
   <!-- platform -->
   <a href="https://apps.apple.com/kr/app/khu-pass/id1598848741">
@@ -81,7 +85,7 @@
 
 ### Contributing Guidelines
 
-KHU PASS에 기여하기 위해 먼저, [Contributing Guidelines](contributing)을 읽어주세요.
+KHU PASS에 기여하기 위해 먼저, [Contributing Guidelines](./CONTRIBUTING.md)을 읽어주세요.
 
 ### TestFlight
 
@@ -90,3 +94,7 @@ KHU PASS의 베타 테스팅을 원하면 [TestFlight](https://testflight.apple.
 ## Author
 
 권동영 Dongyoung Kwon [@Chuncheonian](https://github.com/Chuncheonian) , [chuncheon@duck.com](mailto:chuncheon@duck.com)
+
+## License
+
+KHU PASS is available under the [MIT license](./LICENSE).
