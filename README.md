@@ -1,4 +1,4 @@
-<img src=".github/app-icon.png" width="200" alt="App icon" align="left"/>
+<img src=".github/app-icon.png" width="170" alt="App icon" align="left"/>
 
 <div>
 <h2>KHU PASS - 경희대학생을 위한 쉽고 편리한 도서관 출입 </h2>
@@ -6,37 +6,45 @@
 <a href="https://apps.apple.com/kr/app/khu-pass/id1598848741"><img src=".github/appstore.png" width="150" alt="Download for iOS"/></a>
 </div>
 
-<br/><br/>
+<br/>
 
 <div align="center">
+  <a href="CONTRIBUTING.md">Contributing Guidelines</a>
+  ·
+  <a href="https://github.com/Chuncheonian/khupass/issues">Submit an Issue</a>
+  ·
+  <a href="https://github.com/Chuncheonian/khupass/discussions">Discussion</a>
+  <br>
+  <br>
+
 <!-- shields -->
 <!-- version -->
-<a href="https://github.com/Chuncheonian/khupass/releases">
-<img src="https://img.shields.io/github/release-pre/Chuncheonian/khupass.svg?style=flat" alt="latest version"/>
-</a>
-<!-- platform -->
-<a href="https://apps.apple.com/kr/app/khu-pass/id1598848741">
-<img src="https://img.shields.io/badge/platform-iOS13.0+-lightgrey.svg?style=flat" alt="platform"/>
-</a>
+  <a href="https://github.com/Chuncheonian/khupass/releases">
+    <img src="https://img.shields.io/github/release-pre/Chuncheonian/khupass.svg?style=flat" alt="latest version"/>
+  </a>
+  <!-- platform -->
+  <a href="https://apps.apple.com/kr/app/khu-pass/id1598848741">
+    <img src="https://img.shields.io/badge/platform-iOS13.0+-lightgrey.svg?style=flat" alt="platform"/>
+    </a>
 <!-- swift version -->
-<a href="https://github.com/Chuncheonian/khupass">
-<img src="https://img.shields.io/badge/Swift-v5.5-orange?logo=swift" alt="swift version"/>
-</a>
+  <a href="https://github.com/Chuncheonian/khupass">
+    <img src="https://img.shields.io/badge/Swift-v5.5-orange?logo=swift" alt="swift version"/>
+  </a>
 <!-- xcode version -->
-<a href="https://github.com/Chuncheonian/khupass">
-<img src="https://img.shields.io/badge/Xcode-v13.0-blue?logo=Xcode" alt="xcode"/>
-</a>
+  <a href="https://github.com/Chuncheonian/khupass">
+    <img src="https://img.shields.io/badge/Xcode-v13.0-blue?logo=Xcode" alt="xcode"/>
+  </a>
 <!-- figma -->
-<a href="https://www.figma.com/file/HiL0Pp43axtqCRHz6JfZL3/KHUPASS?node-id=0%3A1">
-<img src="https://img.shields.io/badge/Figma-0C0C0C?logo=figma" alt="figma"/>
-</a>
+  <a href="https://www.figma.com/file/HiL0Pp43axtqCRHz6JfZL3/KHUPASS?node-id=0%3A1">
+    <img src="https://img.shields.io/badge/Figma-0C0C0C?logo=figma" alt="figma"/>
+  </a>
 
-<br/>
-<br/>
+  <br/>
+  <br/>
 
-https://user-images.githubusercontent.com/29334434/147747353-e8fdd332-5b17-4e3b-920e-a420aa811b95.MP4
-
+  https://user-images.githubusercontent.com/29334434/147747353-e8fdd332-5b17-4e3b-920e-a420aa811b95.MP4
 </div>
+
 <hr>
 
 ## About
@@ -70,6 +78,12 @@ https://user-images.githubusercontent.com/29334434/147747353-e8fdd332-5b17-4e3b-
 2. 경희대 건물 출입을 위해 실시간 변경되는 QR 기능 개발 (v2.0)
 
 ## Contributing
+
+### Contributing Guidelines
+
+KHU PASS에 기여하기 위해 먼저, [Contributing Guidelines](contributing)을 읽어주세요.
+
+### TestFlight
 
 KHU PASS의 베타 테스팅을 원하면 [TestFlight](https://testflight.apple.com/join/KmDZoCVe)을 사용해주세요.
 
