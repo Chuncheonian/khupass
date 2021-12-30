@@ -23,7 +23,7 @@
     <img src="https://img.shields.io/github/release-pre/Chuncheonian/khupass.svg?style=flat" alt="latest version"/>
   </a>
   <!-- license -->
-  <a href="https://github.com/Chuncheonian/khupass/blob/master/License.txt">
+  <a href="https://github.com/Chuncheonian/khupass/blob/main/LICENSE">
     <img src="https://img.shields.io/github/license/Chuncheonian/khupass.svg?style=flat" alt="license"/>
   </a>
   <!-- platform -->
@@ -93,7 +93,7 @@ KHU PASS의 베타 테스팅을 원하면 [TestFlight](https://testflight.apple.
 
 ## Author
 
-권동영 Dongyoung Kwon [@Chuncheonian](https://github.com/Chuncheonian) , [chuncheon@duck.com](mailto:chuncheon@duck.com)
+권동영 Dongyoung Kwon [@Chuncheonian](https://github.com/Chuncheonian), [chuncheon@duck.com](mailto:chuncheon@duck.com)
 
 ## License
 
