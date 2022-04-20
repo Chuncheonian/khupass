@@ -7,42 +7,16 @@
 
 import UIKit
 import PassKit
-import NVActivityIndicatorView
 
-class PassController: UIViewController {
+final class PassController: UIViewController {
 
-  // MARK: - Properties
+  // MARK: - property
+  
+  private let passView = PassView()
   
   private let barcodeValue: String
   
-  private let titleLabel = UILabel().then {
-    $0.text = "스캔이 완료되었습니다."
-    $0.font = UIFont.nanumGothic(size: 25, family: .extrabold)
-  }
-  
-  private let subLabel = UILabel().then {
-    $0.text = "Apple Wallet에 보관하기 위해\n아래의 버튼을 클릭해주세요."
-    $0.font = UIFont.nanumGothic(size: 14, family: .bold)
-    $0.numberOfLines = 0
-    $0.setLinespace(spacing: 6)
-    $0.textColor = .init(white: 0, alpha: 0.6)
-  }
-  
-  private let passImageView = UIImageView().then {
-    $0.image = UIImage(named: "pass")
-    $0.contentMode = .scaleAspectFill
-  }
-  
-  private let passButton = PKAddPassButton()
-  
-  private let indicator = NVActivityIndicatorView(
-    frame: CGRect(x: 0, y: 0, width: 50, height: 50),
-    type: .circleStrokeSpin,
-    color: .black,
-    padding: 0
-  )
-  
-  // MARK: - Lifecycle
+  // MARK: - life cycle
   
   init(barcodeValue: String) {
     self.barcodeValue = barcodeValue
@@ -53,14 +27,23 @@ class PassController: UIViewController {
     fatalError("init(coder:) has not been implemented")
   }
   
-  override func viewDidLoad() {
-    super.viewDidLoad()
-    view.backgroundColor = .white
-    navigationController?.navigationBar.topItem?.title = ""
-    layoutSubviews()
+  override func loadView() {
+    super.loadView()
+    self.view = self.passView
   }
   
-  // MARK: - Action
+  override func viewDidLoad() {
+    super.viewDidLoad()
+    self.navigationController?.navigationBar.topItem?.title = ""
+    
+    self.passView.passButton.addTarget(
+      self,
+      action: #selector(self.addCredential),
+      for: .touchUpInside
+    )
+  }
+  
+  // MARK: - action
   
   @objc func addCredential() {
     let url: URL! = URL(string: "\(BASE_URL)?barcodeValue=\(barcodeValue)")
@@ -68,12 +51,12 @@ class PassController: UIViewController {
     let config = URLSessionConfiguration.default
     let session = URLSession(configuration: config)
     
-    indicator.startAnimating()
+    self.passView.indicator.startAnimating()
     
     let task : URLSessionDataTask = session.dataTask(with: request as URLRequest, completionHandler: {[weak self] (data, response, error) in
       do {
         DispatchQueue.main.sync {
-          self?.indicator.stopAnimating()
+          self?.passView.indicator.stopAnimating()
         }
         
         let pass = try PKPass(data: data ?? Data())
@@ -97,7 +80,7 @@ class PassController: UIViewController {
         }
       } catch {
         DispatchQueue.main.sync {
-          self?.indicator.stopAnimating()
+          self?.passView.indicator.stopAnimating()
         }
         self?.showAlert(title: "오류", message: "Pass를 로드하지 못했습니다.")
       }
@@ -105,45 +88,16 @@ class PassController: UIViewController {
     task.resume()
   }
   
-  // MARK: - Helper
+  // MARK: - method
   
-  private func layoutSubviews() {
-    view.addSubview(titleLabel)
-    titleLabel.snp.makeConstraints { make in
-      make.top.equalTo(self.view.safeAreaLayoutGuide.snp.top).offset(14)
-      make.leading.equalTo(self.view.safeAreaLayoutGuide.snp.leading).offset(16)
-    }
+  private func showAlert(title: String, message: String) {
+    let alertVC = UIAlertController(
+      title: title,
+      message: message,
+      preferredStyle: .alert
+    )
     
-    view.addSubview(subLabel)
-    subLabel.snp.makeConstraints { make in
-      make.top.equalTo(titleLabel.snp.bottom).offset(20)
-      make.leading.equalTo(titleLabel.snp.leading)
-    }
-    
-    view.addSubview(passImageView)
-    passImageView.snp.makeConstraints { make in
-      make.centerX.equalToSuperview()
-      make.top.equalTo(subLabel.snp.bottom).offset(25)
-    }
-    
-    view.addSubview(passButton)
-    passButton.addTarget(self, action: #selector(addCredential), for: .touchUpInside)
-    passButton.snp.makeConstraints { make in
-      make.leading.equalTo(self.view.safeAreaLayoutGuide.snp.leading).offset(32)
-      make.bottom.equalTo(self.view.safeAreaLayoutGuide.snp.bottom).offset(-40)
-      make.trailing.equalTo(self.view.safeAreaLayoutGuide.snp.trailing).offset(-32)
-      make.height.equalTo(50)
-    }
-    
-    view.addSubview(indicator)
-    indicator.snp.makeConstraints { make in
-      make.center.equalToSuperview()
-    }
-  }
-  
-  func showAlert(title: String, message: String) {
-    let alertVC = UIAlertController(title: title, message: message, preferredStyle: .alert)
-    let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+    let okAction = UIAlertAction(title: "OK", style: .default)
     alertVC.addAction(okAction)
     self.present(alertVC, animated: true, completion: nil)
   }
