@@ -33,6 +33,7 @@
 		D5ED348428101E7200814131 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = D5ED348328101E7200814131 /* Lottie */; };
 		D5ED3487281021B500814131 /* BarcodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5ED3486281021B500814131 /* BarcodeView.swift */; };
 		D5ED348928102A1100814131 /* PassView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5ED348828102A1100814131 /* PassView.swift */; };
+		D5ED348B28102E4400814131 /* CompletedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5ED348A28102E4400814131 /* CompletedView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -62,6 +63,7 @@
 		D5ED348028101CA900814131 /* IntroView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroView.swift; sourceTree = "<group>"; };
 		D5ED3486281021B500814131 /* BarcodeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarcodeView.swift; sourceTree = "<group>"; };
 		D5ED348828102A1100814131 /* PassView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PassView.swift; sourceTree = "<group>"; };
+		D5ED348A28102E4400814131 /* CompletedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompletedView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -208,6 +210,7 @@
 			isa = PBXGroup;
 			children = (
 				D5C005B9275791F900151A27 /* CompletedController.swift */,
+				D5ED348A28102E4400814131 /* CompletedView.swift */,
 			);
 			path = CompletedScreen;
 			sourceTree = "<group>";
@@ -317,6 +320,7 @@
 				D5C78D7327451283008FAC9A /* BarcodeController.swift in Sources */,
 				D57BEC0D274DFE5B00E65966 /* UIColor+Extension.swift in Sources */,
 				D58DE8DE274A6F4D00773BBE /* IntroController.swift in Sources */,
+				D5ED348B28102E4400814131 /* CompletedView.swift in Sources */,
 				D5C005BA275791F900151A27 /* CompletedController.swift in Sources */,
 				D5ED3487281021B500814131 /* BarcodeView.swift in Sources */,
 				D5ED348128101CA900814131 /* IntroView.swift in Sources */,
