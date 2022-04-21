@@ -16,7 +16,6 @@
 		D58DE8E0274A795A00773BBE /* UILabel+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D58DE8DF274A795A00773BBE /* UILabel+Extension.swift */; };
 		D58DE8E2274A7BE000773BBE /* PassController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D58DE8E1274A7BE000773BBE /* PassController.swift */; };
 		D58DE8E4274A805A00773BBE /* ScannerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D58DE8E3274A805A00773BBE /* ScannerController.swift */; };
-		D58DE8E7274A943F00773BBE /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = D58DE8E6274A943F00773BBE /* Lottie */; };
 		D58DE8EC274A991100773BBE /* 79064-arrows.json in Resources */ = {isa = PBXBuildFile; fileRef = D58DE8EB274A991100773BBE /* 79064-arrows.json */; };
 		D5A8E181275B8FC100101831 /* NVActivityIndicatorView in Frameworks */ = {isa = PBXBuildFile; productRef = D5A8E180275B8FC100101831 /* NVActivityIndicatorView */; };
 		D5ABB1D0275E536D00D4A1A2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D5ABB1CE275E536D00D4A1A2 /* LaunchScreen.storyboard */; };
@@ -30,6 +29,11 @@
 		D5E980FB274A4BF900FD0A98 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = D5E980FA274A4BF900FD0A98 /* SnapKit */; };
 		D5E980FE274A4C0400FD0A98 /* Then in Frameworks */ = {isa = PBXBuildFile; productRef = D5E980FD274A4C0400FD0A98 /* Then */; };
 		D5E9810A274A51C300FD0A98 /* UIFont+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5E98109274A51C300FD0A98 /* UIFont+Extension.swift */; };
+		D5ED348128101CA900814131 /* IntroView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5ED348028101CA900814131 /* IntroView.swift */; };
+		D5ED348428101E7200814131 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = D5ED348328101E7200814131 /* Lottie */; };
+		D5ED3487281021B500814131 /* BarcodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5ED3486281021B500814131 /* BarcodeView.swift */; };
+		D5ED348928102A1100814131 /* PassView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5ED348828102A1100814131 /* PassView.swift */; };
+		D5ED348B28102E4400814131 /* CompletedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5ED348A28102E4400814131 /* CompletedView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,6 +60,10 @@
 		D5D4510B27844469000EA119 /* PassKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PassKit.framework; path = System/Library/Frameworks/PassKit.framework; sourceTree = SDKROOT; };
 		D5E98109274A51C300FD0A98 /* UIFont+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+Extension.swift"; sourceTree = "<group>"; };
 		D5EA251027844BED0064BC41 /* KHUPASSDebug.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.entitlements; path = KHUPASSDebug.entitlements; sourceTree = "<group>"; };
+		D5ED348028101CA900814131 /* IntroView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroView.swift; sourceTree = "<group>"; };
+		D5ED3486281021B500814131 /* BarcodeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarcodeView.swift; sourceTree = "<group>"; };
+		D5ED348828102A1100814131 /* PassView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PassView.swift; sourceTree = "<group>"; };
+		D5ED348A28102E4400814131 /* CompletedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompletedView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,24 +71,17 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D5ED348428101E7200814131 /* Lottie in Frameworks */,
 				D5A8E181275B8FC100101831 /* NVActivityIndicatorView in Frameworks */,
 				D5D4510C27844469000EA119 /* PassKit.framework in Frameworks */,
 				D5E980FB274A4BF900FD0A98 /* SnapKit in Frameworks */,
 				D5E980FE274A4C0400FD0A98 /* Then in Frameworks */,
-				D58DE8E7274A943F00773BBE /* Lottie in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		D558B6F4274AAE1C0050EA58 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
 		D58DE8E8274A969C00773BBE /* Lottie */ = {
 			isa = PBXGroup;
 			children = (
@@ -112,9 +113,7 @@
 			children = (
 				D5EA251027844BED0064BC41 /* KHUPASSDebug.entitlements */,
 				D5D4510927844469000EA119 /* KHUPASS.entitlements */,
-				D558B6F4274AAE1C0050EA58 /* Model */,
-				D5C78D842745212B008FAC9A /* View */,
-				D5C78D8627452134008FAC9A /* Controller */,
+				D5ED3485281020D600814131 /* Screen */,
 				D5E98107274A519D00FD0A98 /* Utils */,
 				D5C78D82274515D0008FAC9A /* Support */,
 			);
@@ -133,25 +132,6 @@
 				D5C78D7C27451285008FAC9A /* Info.plist */,
 			);
 			path = Support;
-			sourceTree = "<group>";
-		};
-		D5C78D842745212B008FAC9A /* View */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		D5C78D8627452134008FAC9A /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-				D58DE8DD274A6F4D00773BBE /* IntroController.swift */,
-				D5C78D7227451283008FAC9A /* BarcodeController.swift */,
-				D58DE8E3274A805A00773BBE /* ScannerController.swift */,
-				D58DE8E1274A7BE000773BBE /* PassController.swift */,
-				D5C005B9275791F900151A27 /* CompletedController.swift */,
-			);
-			path = Controller;
 			sourceTree = "<group>";
 		};
 		D5D4510A27844469000EA119 /* Frameworks */ = {
@@ -191,6 +171,62 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		D5ED347B28101C7400814131 /* IntroScreen */ = {
+			isa = PBXGroup;
+			children = (
+				D5ED348028101CA900814131 /* IntroView.swift */,
+				D58DE8DD274A6F4D00773BBE /* IntroController.swift */,
+			);
+			path = IntroScreen;
+			sourceTree = "<group>";
+		};
+		D5ED347C28101C7B00814131 /* BarcodeScreen */ = {
+			isa = PBXGroup;
+			children = (
+				D5ED3486281021B500814131 /* BarcodeView.swift */,
+				D5C78D7227451283008FAC9A /* BarcodeController.swift */,
+			);
+			path = BarcodeScreen;
+			sourceTree = "<group>";
+		};
+		D5ED347D28101C8500814131 /* ScannerScreen */ = {
+			isa = PBXGroup;
+			children = (
+				D58DE8E3274A805A00773BBE /* ScannerController.swift */,
+			);
+			path = ScannerScreen;
+			sourceTree = "<group>";
+		};
+		D5ED347E28101C8B00814131 /* PassScreen */ = {
+			isa = PBXGroup;
+			children = (
+				D5ED348828102A1100814131 /* PassView.swift */,
+				D58DE8E1274A7BE000773BBE /* PassController.swift */,
+			);
+			path = PassScreen;
+			sourceTree = "<group>";
+		};
+		D5ED347F28101C9300814131 /* CompletedScreen */ = {
+			isa = PBXGroup;
+			children = (
+				D5C005B9275791F900151A27 /* CompletedController.swift */,
+				D5ED348A28102E4400814131 /* CompletedView.swift */,
+			);
+			path = CompletedScreen;
+			sourceTree = "<group>";
+		};
+		D5ED3485281020D600814131 /* Screen */ = {
+			isa = PBXGroup;
+			children = (
+				D5ED347B28101C7400814131 /* IntroScreen */,
+				D5ED347C28101C7B00814131 /* BarcodeScreen */,
+				D5ED347D28101C8500814131 /* ScannerScreen */,
+				D5ED347E28101C8B00814131 /* PassScreen */,
+				D5ED347F28101C9300814131 /* CompletedScreen */,
+			);
+			path = Screen;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -210,8 +246,8 @@
 			packageProductDependencies = (
 				D5E980FA274A4BF900FD0A98 /* SnapKit */,
 				D5E980FD274A4C0400FD0A98 /* Then */,
-				D58DE8E6274A943F00773BBE /* Lottie */,
 				D5A8E180275B8FC100101831 /* NVActivityIndicatorView */,
+				D5ED348328101E7200814131 /* Lottie */,
 			);
 			productName = KHUPASS;
 			productReference = D5C78D6B27451283008FAC9A /* KHUPASS.app */;
@@ -245,8 +281,8 @@
 			packageReferences = (
 				D5E980F9274A4BF900FD0A98 /* XCRemoteSwiftPackageReference "SnapKit" */,
 				D5E980FC274A4C0400FD0A98 /* XCRemoteSwiftPackageReference "Then" */,
-				D58DE8E5274A943F00773BBE /* XCRemoteSwiftPackageReference "lottie-ios" */,
 				D5A8E17F275B8FC100101831 /* XCRemoteSwiftPackageReference "NVActivityIndicatorView" */,
+				D5ED348228101E7200814131 /* XCRemoteSwiftPackageReference "lottie-ios" */,
 			);
 			productRefGroup = D5C78D6C27451283008FAC9A /* Products */;
 			projectDirPath = "";
@@ -280,10 +316,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				D58DE8E4274A805A00773BBE /* ScannerController.swift in Sources */,
+				D5ED348928102A1100814131 /* PassView.swift in Sources */,
 				D5C78D7327451283008FAC9A /* BarcodeController.swift in Sources */,
 				D57BEC0D274DFE5B00E65966 /* UIColor+Extension.swift in Sources */,
 				D58DE8DE274A6F4D00773BBE /* IntroController.swift in Sources */,
+				D5ED348B28102E4400814131 /* CompletedView.swift in Sources */,
 				D5C005BA275791F900151A27 /* CompletedController.swift in Sources */,
+				D5ED3487281021B500814131 /* BarcodeView.swift in Sources */,
+				D5ED348128101CA900814131 /* IntroView.swift in Sources */,
 				D5C78D6F27451283008FAC9A /* AppDelegate.swift in Sources */,
 				D566D9CB2756588100B14771 /* Constants.swift in Sources */,
 				D58DE8E0274A795A00773BBE /* UILabel+Extension.swift in Sources */,
@@ -519,14 +559,6 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		D58DE8E5274A943F00773BBE /* XCRemoteSwiftPackageReference "lottie-ios" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/airbnb/lottie-ios";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 3.0.0;
-			};
-		};
 		D5A8E17F275B8FC100101831 /* XCRemoteSwiftPackageReference "NVActivityIndicatorView" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/ninjaprox/NVActivityIndicatorView";
@@ -551,14 +583,17 @@
 				minimumVersion = 2.0.0;
 			};
 		};
+		D5ED348228101E7200814131 /* XCRemoteSwiftPackageReference "lottie-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/airbnb/lottie-ios";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		D58DE8E6274A943F00773BBE /* Lottie */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = D58DE8E5274A943F00773BBE /* XCRemoteSwiftPackageReference "lottie-ios" */;
-			productName = Lottie;
-		};
 		D5A8E180275B8FC100101831 /* NVActivityIndicatorView */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = D5A8E17F275B8FC100101831 /* XCRemoteSwiftPackageReference "NVActivityIndicatorView" */;
@@ -573,6 +608,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = D5E980FC274A4C0400FD0A98 /* XCRemoteSwiftPackageReference "Then" */;
 			productName = Then;
+		};
+		D5ED348328101E7200814131 /* Lottie */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D5ED348228101E7200814131 /* XCRemoteSwiftPackageReference "lottie-ios" */;
+			productName = Lottie;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
