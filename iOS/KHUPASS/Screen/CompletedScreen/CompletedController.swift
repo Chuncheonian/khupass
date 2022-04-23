@@ -38,6 +38,7 @@ final class CompletedController: UIViewController {
     UIViewPropertyAnimator(duration: 0, curve: .linear) {
       self.completedView.titleLabel.alpha = 1.0
       self.completedView.descriptionLabel.alpha = 1.0
+      self.completedView.goToWalletButton.alpha = 1.0
     }.startAnimation(afterDelay: 1.2)
   }
   

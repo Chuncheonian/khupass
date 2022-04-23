@@ -30,6 +30,19 @@ final class CompletedView: UIView {
     $0.textColor = .init(white: 0, alpha: 0.6)
     $0.alpha = 0.0
   }
+  
+  lazy var goToWalletButton = UIButton(type: .system).then {
+    $0.backgroundColor = .khuBlue
+    $0.setTitle("지갑 앱 실행", for: .normal)
+    $0.setTitleColor(.white, for: .normal)
+    $0.titleLabel?.font = UIFont.nanumGothic(size: 17, family: .bold)
+    $0.snp.makeConstraints { make in
+      make.width.equalTo(311)
+      make.height.equalTo(50)
+    }
+    $0.layer.cornerRadius = 10
+    $0.alpha = 0.0
+  }
    
   // MARK: - life cycle
   
@@ -46,22 +59,29 @@ final class CompletedView: UIView {
   // MARK: - method
   
   private func configUI() {
-    self.addSubview(titleLabel)
+    self.addSubview(self.titleLabel)
     self.titleLabel.snp.makeConstraints { make in
       make.center.equalToSuperview()
     }
     
-    self.addSubview(doneAnimation)
+    self.addSubview(self.doneAnimation)
     self.doneAnimation.play()
     self.doneAnimation.snp.makeConstraints { make in
       make.centerX.equalToSuperview()
       make.bottom.equalTo(self.titleLabel.snp.top).offset(-15)
     }
     
-    self.addSubview(descriptionLabel)
+    self.addSubview(self.descriptionLabel)
     self.descriptionLabel.snp.makeConstraints { make in
       make.centerX.equalToSuperview()
       make.top.equalTo(self.titleLabel.snp.bottom).offset(20)
+    }
+    
+    self.addSubview(self.goToWalletButton)
+    self.goToWalletButton.snp.makeConstraints { make in
+      make.leading.equalTo(self.safeAreaLayoutGuide.snp.leading).offset(32)
+      make.bottom.equalTo(self.safeAreaLayoutGuide.snp.bottom).offset(-40)
+      make.trailing.equalTo(self.safeAreaLayoutGuide.snp.trailing).offset(-32)
     }
   }
 }
