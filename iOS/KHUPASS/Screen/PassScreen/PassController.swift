@@ -57,7 +57,7 @@ final class PassController: UIViewController {
         try presentPass()
       } catch {
         passView.indicator.stopAnimating()
-        showAlert(title: "오류", message: error.localizedDescription)
+        makeAlert(title: "오류", message: error.localizedDescription)
       }
     }
   }
@@ -81,18 +81,6 @@ final class PassController: UIViewController {
     
     previewPassVC.delegate = self
     present(previewPassVC, animated: true)
-  }
-  
-  private func showAlert(title: String, message: String) {
-    let alertVC = UIAlertController(
-      title: title,
-      message: message,
-      preferredStyle: .alert
-    )
-    
-    let okAction = UIAlertAction(title: "OK", style: .default)
-    alertVC.addAction(okAction)
-    present(alertVC, animated: true, completion: nil)
   }
 }
 

@@ -28,6 +28,7 @@
 		D5C78D7827451285008FAC9A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D5C78D7727451285008FAC9A /* Assets.xcassets */; };
 		D5CCD556282D06FD008D2A04 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5CCD555282D06FD008D2A04 /* NetworkError.swift */; };
 		D5CCD558282D081C008D2A04 /* PassController+Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5CCD557282D081C008D2A04 /* PassController+Error.swift */; };
+		D5CCD55C282D767F008D2A04 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5CCD55B282D767F008D2A04 /* UIViewController+Extension.swift */; };
 		D5D4510C27844469000EA119 /* PassKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5D4510B27844469000EA119 /* PassKit.framework */; };
 		D5E980FB274A4BF900FD0A98 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = D5E980FA274A4BF900FD0A98 /* SnapKit */; };
 		D5E980FE274A4C0400FD0A98 /* Then in Frameworks */ = {isa = PBXBuildFile; productRef = D5E980FD274A4C0400FD0A98 /* Then */; };
@@ -62,6 +63,7 @@
 		D5C78D7C27451285008FAC9A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D5CCD555282D06FD008D2A04 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 		D5CCD557282D081C008D2A04 /* PassController+Error.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PassController+Error.swift"; sourceTree = "<group>"; };
+		D5CCD55B282D767F008D2A04 /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
 		D5D4510927844469000EA119 /* KHUPASS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = KHUPASS.entitlements; sourceTree = "<group>"; };
 		D5D4510B27844469000EA119 /* PassKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PassKit.framework; path = System/Library/Frameworks/PassKit.framework; sourceTree = SDKROOT; };
 		D5E98109274A51C300FD0A98 /* UIFont+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+Extension.swift"; sourceTree = "<group>"; };
@@ -183,6 +185,7 @@
 				D5E98109274A51C300FD0A98 /* UIFont+Extension.swift */,
 				D57BEC0C274DFE5B00E65966 /* UIColor+Extension.swift */,
 				D58DE8DF274A795A00773BBE /* UILabel+Extension.swift */,
+				D5CCD55B282D767F008D2A04 /* UIViewController+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -340,6 +343,7 @@
 				D58DE8DE274A6F4D00773BBE /* IntroController.swift in Sources */,
 				D5ED348B28102E4400814131 /* CompletedView.swift in Sources */,
 				D5C005BA275791F900151A27 /* CompletedController.swift in Sources */,
+				D5CCD55C282D767F008D2A04 /* UIViewController+Extension.swift in Sources */,
 				D5ED3487281021B500814131 /* BarcodeView.swift in Sources */,
 				D5ED348128101CA900814131 /* IntroView.swift in Sources */,
 				D5C78D6F27451283008FAC9A /* AppDelegate.swift in Sources */,
