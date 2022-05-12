@@ -5,21 +5,30 @@
 //  Created by dykoon on 2021/11/21.
 //
 
-import UIKit
 import AVFoundation
+import UIKit
 
 protocol ScannerControllerDelegate: AnyObject {
   func didCompletedScan(_ controller: ScannerController, barcodeValue: String)
+  func didFailedScan(_ controller: ScannerController)
 }
 
-class ScannerController: UIViewController {
+final class ScannerController: UIViewController {
   
-  // MARK: - Properties
+  // MARK: - property
   
   weak var delegate: ScannerControllerDelegate?
   
   private var captureSession = AVCaptureSession()
   private var previewLayer: AVCaptureVideoPreviewLayer!
+  
+  private let topTransparentView = UIView().then {
+    $0.backgroundColor = .black.withAlphaComponent(0.8)
+  }
+  
+  private let bottomTransparentView = UIView().then {
+    $0.backgroundColor = .black.withAlphaComponent(0.8)
+  }
   
   private let descriptionLabel = UILabel().then {
     $0.text = "학생증 바코드를 자동 촬영합니다."
@@ -34,25 +43,23 @@ class ScannerController: UIViewController {
     $0.addTarget(self, action: #selector(didTapCancelButton), for: .touchUpInside)
   }
   
-  
-  
-  // MARK: - Lifecycle
+  // MARK: - life cycle
   
   override func viewDidLoad() {
     super.viewDidLoad()
-    configureScanner()
-    configureUI()
+    setupScanner()
+    configUI()
   }
   
-  // MARK: - Action
+  // MARK: - action
   
   @objc private func didTapCancelButton() {
     self.dismiss(animated: true, completion: nil)
   }
   
-  // MARK: - Helpers
+  // MARK: - method
   
-  private func configureScanner() {
+  private func setupScanner() {
     // 카메라 사용
     guard let videoCaptureDevice = AVCaptureDevice.default(for: .video) else {
       return
@@ -64,51 +71,49 @@ class ScannerController: UIViewController {
     do {
       videoInput = try AVCaptureDeviceInput(device: videoCaptureDevice)
     } catch {
+      delegate?.didFailedScan(self)
       return
     }
       
-    if self.captureSession.canAddInput(videoInput) {
-      self.captureSession.addInput(videoInput)
+    if captureSession.canAddInput(videoInput) {
+      captureSession.addInput(videoInput)
     } else {
+      delegate?.didFailedScan(self)
       return
     }
-      
+    
     let metadataOutput = AVCaptureMetadataOutput()
       
-    if self.captureSession.canAddOutput(metadataOutput) {
-      self.captureSession.addOutput(metadataOutput)
+    if captureSession.canAddOutput(metadataOutput) {
+      captureSession.addOutput(metadataOutput)
       metadataOutput.setMetadataObjectsDelegate(self, queue: DispatchQueue.main)
       metadataOutput.metadataObjectTypes = [.code39, .code128]
     } else {
+      delegate?.didFailedScan(self)
       return
     }
-      
-    self.previewLayer = AVCaptureVideoPreviewLayer(session: self.captureSession)
-    self.previewLayer.frame = self.view.layer.bounds
-    self.previewLayer.videoGravity = .resizeAspectFill
-    self.view.layer.addSublayer(self.previewLayer)
-    print("DEBUG: Running Scanner")
-    self.captureSession.startRunning()
+    
+    previewLayer = AVCaptureVideoPreviewLayer(session: captureSession)
+    previewLayer.frame = view.layer.bounds
+    previewLayer.videoGravity = .resizeAspectFill
+    view.layer.addSublayer(previewLayer)
+    captureSession.startRunning()
   }
   
-  private func configureUI() {
-    let topTransparentView = UIView()
-    topTransparentView.backgroundColor = .black.withAlphaComponent(0.8)
+  private func configUI() {
     view.addSubview(topTransparentView)
     topTransparentView.snp.makeConstraints { make in
-      make.top.equalTo(self.view.snp.top)
-      make.leading.equalTo(self.view.snp.leading)
-      make.trailing.equalTo(self.view.snp.trailing)
+      make.top.equalToSuperview()
+      make.leading.equalToSuperview()
+      make.trailing.equalToSuperview()
       make.height.equalTo(250)
     }
     
-    let bottomTransparentView = UIView()
-    bottomTransparentView.backgroundColor = .black.withAlphaComponent(0.8)
     view.addSubview(bottomTransparentView)
     bottomTransparentView.snp.makeConstraints { make in
-      make.leading.equalTo(self.view.snp.leading)
-      make.bottom.equalTo(self.view.snp.bottom)
-      make.trailing.equalTo(self.view.snp.trailing)
+      make.leading.equalToSuperview()
+      make.bottom.equalToSuperview()
+      make.trailing.equalToSuperview()
       make.height.equalTo(250)
     }
     
@@ -134,19 +139,16 @@ extension ScannerController: AVCaptureMetadataOutputObjectsDelegate {
     didOutput metadataObjects: [AVMetadataObject],
     from connection: AVCaptureConnection
   ) {
-    if let first = metadataObjects.first {
-      guard let readableObject = first as? AVMetadataMachineReadableCodeObject else {
-        return
-      }
-      
-      guard let stringValue = readableObject.stringValue else { return }
-      
-      found(code: stringValue)
+    guard
+      let object = metadataObjects.first,
+      let readableObject = object as? AVMetadataMachineReadableCodeObject,
+      let stringValue = readableObject.stringValue
+    else {
+      delegate?.didFailedScan(self)
+      return
     }
-  }
-  
-  func found(code: String) {
-    self.captureSession.stopRunning()
-    self.delegate?.didCompletedScan(self, barcodeValue: code)
+    
+    captureSession.stopRunning()
+    delegate?.didCompletedScan(self, barcodeValue: stringValue)
   }
 }
