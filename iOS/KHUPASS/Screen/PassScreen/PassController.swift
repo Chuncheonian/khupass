@@ -15,6 +15,7 @@ final class PassController: UIViewController {
   private let passView = PassView()
   
   private let barcodeValue: String
+  private var pass = PKPass()
   
   // MARK: - life cycle
   
@@ -29,7 +30,7 @@ final class PassController: UIViewController {
   
   override func loadView() {
     super.loadView()
-    self.view = self.passView
+    self.view = passView
   }
   
   override func viewDidLoad() {
@@ -38,57 +39,49 @@ final class PassController: UIViewController {
     
     self.passView.passButton.addTarget(
       self,
-      action: #selector(self.addCredential),
+      action: #selector(fetchPass),
       for: .touchUpInside
     )
   }
   
   // MARK: - action
   
-  @objc func addCredential() {
-    let url: URL! = URL(string: "\(BASE_URL)?barcodeValue=\(barcodeValue)")
-    let request: URLRequest = URLRequest(url: url as URL)
-    let config = URLSessionConfiguration.default
-    let session = URLSession(configuration: config)
-    
-    self.passView.indicator.startAnimating()
-    
-    let task : URLSessionDataTask = session.dataTask(with: request as URLRequest, completionHandler: {[weak self] (data, response, error) in
+  @objc private func fetchPass() {
+    Task {
       do {
-        DispatchQueue.main.sync {
-          self?.passView.indicator.stopAnimating()
-        }
-        
-        let pass = try PKPass(data: data ?? Data())
-        let passLibrary = PKPassLibrary()
+        passView.indicator.startAnimating()
+        pass = try await API.fetchPass(barcodeValue: barcodeValue)
+        passView.indicator.stopAnimating()
 
-        if passLibrary.containsPass(pass) {
-          DispatchQueue.main.sync {
-            self?.showAlert(title: "오류", message: "이미 발급되었습니다. 지갑에서 확인해주세요.")
-          }
-        } else {
-          if let pkvc = PKAddPassesViewController(pass: pass) {
-            pkvc.delegate = self
-            DispatchQueue.main.sync {
-              self?.navigationController?.present(pkvc, animated: true)
-            }
-          } else {
-            DispatchQueue.main.sync {
-              self?.showAlert(title: "오류", message: "iPhone에서만 작동됩니다.")
-            }
-          }
-        }
+        try checkPassExist()
+        try presentPass()
       } catch {
-        DispatchQueue.main.sync {
-          self?.passView.indicator.stopAnimating()
-        }
-        self?.showAlert(title: "오류", message: "Pass를 로드하지 못했습니다.")
+        passView.indicator.stopAnimating()
+        showAlert(title: "오류", message: error.localizedDescription)
       }
-    })
-    task.resume()
+    }
   }
   
   // MARK: - method
+  
+  /// Wallet App에 Pass가 이미 존재하는 지 확인
+  private func checkPassExist() throws {
+    let passLibrary = PKPassLibrary()
+    
+    if passLibrary.containsPass(pass) {
+      throw PassError.existAlreadyPass
+    }
+  }
+  
+  /// iPhone이 확인한 후, PKAddPassesViewController 실행
+  private func presentPass() throws {
+    guard let previewPassVC = PKAddPassesViewController(pass: pass) else {
+      throw PassError.invalidDevice
+    }
+    
+    previewPassVC.delegate = self
+    present(previewPassVC, animated: true)
+  }
   
   private func showAlert(title: String, message: String) {
     let alertVC = UIAlertController(
@@ -99,7 +92,7 @@ final class PassController: UIViewController {
     
     let okAction = UIAlertAction(title: "OK", style: .default)
     alertVC.addAction(okAction)
-    self.present(alertVC, animated: true, completion: nil)
+    present(alertVC, animated: true, completion: nil)
   }
 }
 
@@ -107,9 +100,14 @@ final class PassController: UIViewController {
 
 extension PassController: PKAddPassesViewControllerDelegate {
   func addPassesViewControllerDidFinish(_ controller: PKAddPassesViewController) {
-    controller.dismiss(animated: true) {
-      let completedVC = CompletedController()
-      self.navigationController?.pushViewController(completedVC, animated: true)
+    controller.dismiss(animated: true) { [weak self] in
+      let passLibrary = PKPassLibrary()
+      
+      // PKAddPassesViewController에서 Pass를 추가한 경우
+      if passLibrary.containsPass(self?.pass ?? PKPass()) {
+        let completedVC = CompletedController()
+        self?.navigationController?.pushViewController(completedVC, animated: true)
+      }
     }
   }
 }
