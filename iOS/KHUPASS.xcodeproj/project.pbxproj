@@ -17,6 +17,7 @@
 		D58DE8E2274A7BE000773BBE /* PassController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D58DE8E1274A7BE000773BBE /* PassController.swift */; };
 		D58DE8E4274A805A00773BBE /* ScannerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D58DE8E3274A805A00773BBE /* ScannerController.swift */; };
 		D58DE8EC274A991100773BBE /* 79064-arrows.json in Resources */ = {isa = PBXBuildFile; fileRef = D58DE8EB274A991100773BBE /* 79064-arrows.json */; };
+		D59AD27F2815A8BA003DB8BE /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = D59AD27E2815A8BA003DB8BE /* API.swift */; };
 		D5A8E181275B8FC100101831 /* NVActivityIndicatorView in Frameworks */ = {isa = PBXBuildFile; productRef = D5A8E180275B8FC100101831 /* NVActivityIndicatorView */; };
 		D5ABB1D0275E536D00D4A1A2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D5ABB1CE275E536D00D4A1A2 /* LaunchScreen.storyboard */; };
 		D5C005BA275791F900151A27 /* CompletedController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5C005B9275791F900151A27 /* CompletedController.swift */; };
@@ -25,6 +26,8 @@
 		D5C78D7127451283008FAC9A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5C78D7027451283008FAC9A /* SceneDelegate.swift */; };
 		D5C78D7327451283008FAC9A /* BarcodeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5C78D7227451283008FAC9A /* BarcodeController.swift */; };
 		D5C78D7827451285008FAC9A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D5C78D7727451285008FAC9A /* Assets.xcassets */; };
+		D5CCD556282D06FD008D2A04 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5CCD555282D06FD008D2A04 /* NetworkError.swift */; };
+		D5CCD558282D081C008D2A04 /* PassController+Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5CCD557282D081C008D2A04 /* PassController+Error.swift */; };
 		D5D4510C27844469000EA119 /* PassKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5D4510B27844469000EA119 /* PassKit.framework */; };
 		D5E980FB274A4BF900FD0A98 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = D5E980FA274A4BF900FD0A98 /* SnapKit */; };
 		D5E980FE274A4C0400FD0A98 /* Then in Frameworks */ = {isa = PBXBuildFile; productRef = D5E980FD274A4C0400FD0A98 /* Then */; };
@@ -47,6 +50,7 @@
 		D58DE8E1274A7BE000773BBE /* PassController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PassController.swift; sourceTree = "<group>"; };
 		D58DE8E3274A805A00773BBE /* ScannerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScannerController.swift; sourceTree = "<group>"; };
 		D58DE8EB274A991100773BBE /* 79064-arrows.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "79064-arrows.json"; sourceTree = "<group>"; };
+		D59AD27E2815A8BA003DB8BE /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		D5ABB1CF275E536D00D4A1A2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D5C005B9275791F900151A27 /* CompletedController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompletedController.swift; sourceTree = "<group>"; };
 		D5C005BB2757942B00151A27 /* 972-done.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "972-done.json"; sourceTree = "<group>"; };
@@ -56,6 +60,8 @@
 		D5C78D7227451283008FAC9A /* BarcodeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarcodeController.swift; sourceTree = "<group>"; };
 		D5C78D7727451285008FAC9A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D5C78D7C27451285008FAC9A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D5CCD555282D06FD008D2A04 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
+		D5CCD557282D081C008D2A04 /* PassController+Error.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PassController+Error.swift"; sourceTree = "<group>"; };
 		D5D4510927844469000EA119 /* KHUPASS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = KHUPASS.entitlements; sourceTree = "<group>"; };
 		D5D4510B27844469000EA119 /* PassKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PassKit.framework; path = System/Library/Frameworks/PassKit.framework; sourceTree = SDKROOT; };
 		D5E98109274A51C300FD0A98 /* UIFont+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+Extension.swift"; sourceTree = "<group>"; };
@@ -91,6 +97,15 @@
 			path = Lottie;
 			sourceTree = "<group>";
 		};
+		D59AD27D2815A8A3003DB8BE /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				D5CCD555282D06FD008D2A04 /* NetworkError.swift */,
+				D59AD27E2815A8BA003DB8BE /* API.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
 		D5C78D6227451283008FAC9A = {
 			isa = PBXGroup;
 			children = (
@@ -114,6 +129,7 @@
 				D5EA251027844BED0064BC41 /* KHUPASSDebug.entitlements */,
 				D5D4510927844469000EA119 /* KHUPASS.entitlements */,
 				D5ED3485281020D600814131 /* Screen */,
+				D59AD27D2815A8A3003DB8BE /* Network */,
 				D5E98107274A519D00FD0A98 /* Utils */,
 				D5C78D82274515D0008FAC9A /* Support */,
 			);
@@ -202,6 +218,7 @@
 			children = (
 				D5ED348828102A1100814131 /* PassView.swift */,
 				D58DE8E1274A7BE000773BBE /* PassController.swift */,
+				D5CCD557282D081C008D2A04 /* PassController+Error.swift */,
 			);
 			path = PassScreen;
 			sourceTree = "<group>";
@@ -315,6 +332,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D5CCD556282D06FD008D2A04 /* NetworkError.swift in Sources */,
 				D58DE8E4274A805A00773BBE /* ScannerController.swift in Sources */,
 				D5ED348928102A1100814131 /* PassView.swift in Sources */,
 				D5C78D7327451283008FAC9A /* BarcodeController.swift in Sources */,
@@ -327,8 +345,10 @@
 				D5C78D6F27451283008FAC9A /* AppDelegate.swift in Sources */,
 				D566D9CB2756588100B14771 /* Constants.swift in Sources */,
 				D58DE8E0274A795A00773BBE /* UILabel+Extension.swift in Sources */,
+				D5CCD558282D081C008D2A04 /* PassController+Error.swift in Sources */,
 				D58DE8E2274A7BE000773BBE /* PassController.swift in Sources */,
 				D5E9810A274A51C300FD0A98 /* UIFont+Extension.swift in Sources */,
+				D59AD27F2815A8BA003DB8BE /* API.swift in Sources */,
 				D5C78D7127451283008FAC9A /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -399,7 +419,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -456,7 +476,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -487,7 +507,7 @@
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -522,7 +542,7 @@
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
