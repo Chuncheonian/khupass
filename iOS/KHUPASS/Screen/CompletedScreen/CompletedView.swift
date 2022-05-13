@@ -31,18 +31,7 @@ final class CompletedView: UIView {
     $0.alpha = 0.0
   }
   
-  lazy var goToWalletButton = UIButton(type: .system).then {
-    $0.backgroundColor = .khuBlue
-    $0.setTitle("지갑 앱 실행", for: .normal)
-    $0.setTitleColor(.white, for: .normal)
-    $0.titleLabel?.font = UIFont.nanumGothic(size: 17, family: .bold)
-    $0.snp.makeConstraints { make in
-      make.width.equalTo(311)
-      make.height.equalTo(50)
-    }
-    $0.layer.cornerRadius = 10
-    $0.alpha = 0.0
-  }
+  lazy var moveWalletButton = BottomButton(title: "지갑 앱 실행", alpha: 0.0)
    
   // MARK: - life cycle
   
@@ -77,8 +66,8 @@ final class CompletedView: UIView {
       make.top.equalTo(self.titleLabel.snp.bottom).offset(20)
     }
     
-    self.addSubview(self.goToWalletButton)
-    self.goToWalletButton.snp.makeConstraints { make in
+    self.addSubview(self.moveWalletButton)
+    self.moveWalletButton.snp.makeConstraints { make in
       make.leading.equalTo(self.safeAreaLayoutGuide.snp.leading).offset(32)
       make.bottom.equalTo(self.safeAreaLayoutGuide.snp.bottom).offset(-40)
       make.trailing.equalTo(self.safeAreaLayoutGuide.snp.trailing).offset(-32)

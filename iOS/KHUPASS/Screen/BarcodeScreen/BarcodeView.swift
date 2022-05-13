@@ -37,17 +37,7 @@ final class BarcodeView: UIView {
     $0.transform = CGAffineTransform(rotationAngle: .pi * 1.72)
   }
   
-  lazy var camearaButton = UIButton(type: .system).then {
-    $0.backgroundColor = .khuBlue
-    $0.setTitle("바코드 촬영", for: .normal)
-    $0.setTitleColor(.white, for: .normal)
-    $0.titleLabel?.font = UIFont.nanumGothic(size: 17, family: .bold)
-    $0.snp.makeConstraints { make in
-      make.width.equalTo(311)
-      make.height.equalTo(50)
-    }
-    $0.layer.cornerRadius = 10
-  }
+  lazy var camearaButton = BottomButton(title: "바코드 촬영")
    
   // MARK: - life cycle
   
