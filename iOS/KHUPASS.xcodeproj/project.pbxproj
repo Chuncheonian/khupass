@@ -17,8 +17,11 @@
 		D58DE8E2274A7BE000773BBE /* PassController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D58DE8E1274A7BE000773BBE /* PassController.swift */; };
 		D58DE8E4274A805A00773BBE /* ScannerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D58DE8E3274A805A00773BBE /* ScannerController.swift */; };
 		D58DE8EC274A991100773BBE /* 79064-arrows.json in Resources */ = {isa = PBXBuildFile; fileRef = D58DE8EB274A991100773BBE /* 79064-arrows.json */; };
+		D5917877282E4C20006DE6B2 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = D5917876282E4C20006DE6B2 /* SnapKit */; };
+		D591787A282E4C67006DE6B2 /* Then in Frameworks */ = {isa = PBXBuildFile; productRef = D5917879282E4C67006DE6B2 /* Then */; };
+		D591787D282E4C75006DE6B2 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = D591787C282E4C75006DE6B2 /* Lottie */; };
+		D5917880282E4CBE006DE6B2 /* NVActivityIndicatorView in Frameworks */ = {isa = PBXBuildFile; productRef = D591787F282E4CBE006DE6B2 /* NVActivityIndicatorView */; };
 		D59AD27F2815A8BA003DB8BE /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = D59AD27E2815A8BA003DB8BE /* API.swift */; };
-		D5A8E181275B8FC100101831 /* NVActivityIndicatorView in Frameworks */ = {isa = PBXBuildFile; productRef = D5A8E180275B8FC100101831 /* NVActivityIndicatorView */; };
 		D5ABB1D0275E536D00D4A1A2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D5ABB1CE275E536D00D4A1A2 /* LaunchScreen.storyboard */; };
 		D5C005BA275791F900151A27 /* CompletedController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5C005B9275791F900151A27 /* CompletedController.swift */; };
 		D5C005BC2757942B00151A27 /* 972-done.json in Resources */ = {isa = PBXBuildFile; fileRef = D5C005BB2757942B00151A27 /* 972-done.json */; };
@@ -31,11 +34,8 @@
 		D5CCD55C282D767F008D2A04 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5CCD55B282D767F008D2A04 /* UIViewController+Extension.swift */; };
 		D5D096C4282E1FE100AE62CF /* BottomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5D096C3282E1FE100AE62CF /* BottomButton.swift */; };
 		D5D4510C27844469000EA119 /* PassKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5D4510B27844469000EA119 /* PassKit.framework */; };
-		D5E980FB274A4BF900FD0A98 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = D5E980FA274A4BF900FD0A98 /* SnapKit */; };
-		D5E980FE274A4C0400FD0A98 /* Then in Frameworks */ = {isa = PBXBuildFile; productRef = D5E980FD274A4C0400FD0A98 /* Then */; };
 		D5E9810A274A51C300FD0A98 /* UIFont+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5E98109274A51C300FD0A98 /* UIFont+Extension.swift */; };
 		D5ED348128101CA900814131 /* IntroView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5ED348028101CA900814131 /* IntroView.swift */; };
-		D5ED348428101E7200814131 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = D5ED348328101E7200814131 /* Lottie */; };
 		D5ED3487281021B500814131 /* BarcodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5ED3486281021B500814131 /* BarcodeView.swift */; };
 		D5ED348928102A1100814131 /* PassView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5ED348828102A1100814131 /* PassView.swift */; };
 		D5ED348B28102E4400814131 /* CompletedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5ED348A28102E4400814131 /* CompletedView.swift */; };
@@ -81,11 +81,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D5ED348428101E7200814131 /* Lottie in Frameworks */,
-				D5A8E181275B8FC100101831 /* NVActivityIndicatorView in Frameworks */,
+				D591787D282E4C75006DE6B2 /* Lottie in Frameworks */,
+				D5917880282E4CBE006DE6B2 /* NVActivityIndicatorView in Frameworks */,
+				D591787A282E4C67006DE6B2 /* Then in Frameworks */,
 				D5D4510C27844469000EA119 /* PassKit.framework in Frameworks */,
-				D5E980FB274A4BF900FD0A98 /* SnapKit in Frameworks */,
-				D5E980FE274A4C0400FD0A98 /* Then in Frameworks */,
+				D5917877282E4C20006DE6B2 /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -275,10 +275,10 @@
 			);
 			name = KHUPASS;
 			packageProductDependencies = (
-				D5E980FA274A4BF900FD0A98 /* SnapKit */,
-				D5E980FD274A4C0400FD0A98 /* Then */,
-				D5A8E180275B8FC100101831 /* NVActivityIndicatorView */,
-				D5ED348328101E7200814131 /* Lottie */,
+				D5917876282E4C20006DE6B2 /* SnapKit */,
+				D5917879282E4C67006DE6B2 /* Then */,
+				D591787C282E4C75006DE6B2 /* Lottie */,
+				D591787F282E4CBE006DE6B2 /* NVActivityIndicatorView */,
 			);
 			productName = KHUPASS;
 			productReference = D5C78D6B27451283008FAC9A /* KHUPASS.app */;
@@ -309,10 +309,10 @@
 			);
 			mainGroup = D5C78D6227451283008FAC9A;
 			packageReferences = (
-				D5E980F9274A4BF900FD0A98 /* XCRemoteSwiftPackageReference "SnapKit" */,
-				D5E980FC274A4C0400FD0A98 /* XCRemoteSwiftPackageReference "Then" */,
-				D5A8E17F275B8FC100101831 /* XCRemoteSwiftPackageReference "NVActivityIndicatorView" */,
-				D5ED348228101E7200814131 /* XCRemoteSwiftPackageReference "lottie-ios" */,
+				D5917875282E4C20006DE6B2 /* XCRemoteSwiftPackageReference "SnapKit" */,
+				D5917878282E4C67006DE6B2 /* XCRemoteSwiftPackageReference "Then" */,
+				D591787B282E4C75006DE6B2 /* XCRemoteSwiftPackageReference "lottie-ios" */,
+				D591787E282E4CBE006DE6B2 /* XCRemoteSwiftPackageReference "NVActivityIndicatorView" */,
 			);
 			productRefGroup = D5C78D6C27451283008FAC9A /* Products */;
 			projectDirPath = "";
@@ -596,15 +596,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		D5A8E17F275B8FC100101831 /* XCRemoteSwiftPackageReference "NVActivityIndicatorView" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/ninjaprox/NVActivityIndicatorView";
-			requirement = {
-				branch = master;
-				kind = branch;
-			};
-		};
-		D5E980F9274A4BF900FD0A98 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+		D5917875282E4C20006DE6B2 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/SnapKit/SnapKit";
 			requirement = {
@@ -612,15 +604,15 @@
 				minimumVersion = 5.0.0;
 			};
 		};
-		D5E980FC274A4C0400FD0A98 /* XCRemoteSwiftPackageReference "Then" */ = {
+		D5917878282E4C67006DE6B2 /* XCRemoteSwiftPackageReference "Then" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/devxoul/Then";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 2.0.0;
+				minimumVersion = 3.0.0;
 			};
 		};
-		D5ED348228101E7200814131 /* XCRemoteSwiftPackageReference "lottie-ios" */ = {
+		D591787B282E4C75006DE6B2 /* XCRemoteSwiftPackageReference "lottie-ios" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/airbnb/lottie-ios";
 			requirement = {
@@ -628,28 +620,36 @@
 				minimumVersion = 3.0.0;
 			};
 		};
+		D591787E282E4CBE006DE6B2 /* XCRemoteSwiftPackageReference "NVActivityIndicatorView" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ninjaprox/NVActivityIndicatorView";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		D5A8E180275B8FC100101831 /* NVActivityIndicatorView */ = {
+		D5917876282E4C20006DE6B2 /* SnapKit */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = D5A8E17F275B8FC100101831 /* XCRemoteSwiftPackageReference "NVActivityIndicatorView" */;
-			productName = NVActivityIndicatorView;
-		};
-		D5E980FA274A4BF900FD0A98 /* SnapKit */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = D5E980F9274A4BF900FD0A98 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			package = D5917875282E4C20006DE6B2 /* XCRemoteSwiftPackageReference "SnapKit" */;
 			productName = SnapKit;
 		};
-		D5E980FD274A4C0400FD0A98 /* Then */ = {
+		D5917879282E4C67006DE6B2 /* Then */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = D5E980FC274A4C0400FD0A98 /* XCRemoteSwiftPackageReference "Then" */;
+			package = D5917878282E4C67006DE6B2 /* XCRemoteSwiftPackageReference "Then" */;
 			productName = Then;
 		};
-		D5ED348328101E7200814131 /* Lottie */ = {
+		D591787C282E4C75006DE6B2 /* Lottie */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = D5ED348228101E7200814131 /* XCRemoteSwiftPackageReference "lottie-ios" */;
+			package = D591787B282E4C75006DE6B2 /* XCRemoteSwiftPackageReference "lottie-ios" */;
 			productName = Lottie;
+		};
+		D591787F282E4CBE006DE6B2 /* NVActivityIndicatorView */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D591787E282E4CBE006DE6B2 /* XCRemoteSwiftPackageReference "NVActivityIndicatorView" */;
+			productName = NVActivityIndicatorView;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
