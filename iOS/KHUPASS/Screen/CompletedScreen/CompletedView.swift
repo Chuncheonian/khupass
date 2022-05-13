@@ -37,8 +37,8 @@ final class CompletedView: UIView {
   
   override init(frame: CGRect) {
     super.init(frame: frame)
-    self.backgroundColor = .white
-    self.configUI()
+    backgroundColor = .white
+    configUI()
   }
   
   required init?(coder: NSCoder) {
@@ -48,29 +48,29 @@ final class CompletedView: UIView {
   // MARK: - method
   
   private func configUI() {
-    self.addSubview(self.titleLabel)
-    self.titleLabel.snp.makeConstraints { make in
+    [titleLabel, doneAnimation, descriptionLabel, moveWalletButton].forEach {
+      addSubview($0)
+    }
+    
+    titleLabel.snp.makeConstraints { make in
       make.center.equalToSuperview()
     }
     
-    self.addSubview(self.doneAnimation)
-    self.doneAnimation.play()
-    self.doneAnimation.snp.makeConstraints { make in
+    doneAnimation.play()
+    doneAnimation.snp.makeConstraints { make in
       make.centerX.equalToSuperview()
-      make.bottom.equalTo(self.titleLabel.snp.top).offset(-15)
+      make.bottom.equalTo(titleLabel.snp.top).offset(-15)
     }
     
-    self.addSubview(self.descriptionLabel)
-    self.descriptionLabel.snp.makeConstraints { make in
+    descriptionLabel.snp.makeConstraints { make in
       make.centerX.equalToSuperview()
-      make.top.equalTo(self.titleLabel.snp.bottom).offset(20)
+      make.top.equalTo(titleLabel.snp.bottom).offset(20)
     }
     
-    self.addSubview(self.moveWalletButton)
-    self.moveWalletButton.snp.makeConstraints { make in
-      make.leading.equalTo(self.safeAreaLayoutGuide.snp.leading).offset(32)
-      make.bottom.equalTo(self.safeAreaLayoutGuide.snp.bottom).offset(-40)
-      make.trailing.equalTo(self.safeAreaLayoutGuide.snp.trailing).offset(-32)
+    moveWalletButton.snp.makeConstraints { make in
+      make.leading.equalToSuperview().offset(32)
+      make.bottom.equalTo(safeAreaLayoutGuide.snp.bottom).offset(-40)
+      make.trailing.equalToSuperview().offset(-32)
     }
   }
 }

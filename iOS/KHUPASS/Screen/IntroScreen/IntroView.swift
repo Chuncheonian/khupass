@@ -33,8 +33,8 @@ final class IntroView: UIView {
   
   override init(frame: CGRect) {
     super.init(frame: frame)
-    self.backgroundColor = .white
-    self.configUI()
+    backgroundColor = .white
+    configUI()
   }
   
   required init?(coder: NSCoder) {
@@ -44,23 +44,24 @@ final class IntroView: UIView {
   // MARK: - method
   
   private func configUI() {
-    self.addSubview(logoImageView)
+    [logoImageView, contentLabel, startButton].forEach {
+      addSubview($0)
+    }
+    
     logoImageView.snp.makeConstraints { make in
-      make.top.equalTo(self.safeAreaLayoutGuide.snp.top).offset(30)
+      make.top.equalTo(safeAreaLayoutGuide.snp.top).offset(30)
       make.centerX.equalToSuperview()
     }
     
-    self.addSubview(contentLabel)
     contentLabel.snp.makeConstraints { make in
       make.centerX.equalToSuperview()
       make.centerY.equalToSuperview().offset(40)
     }
     
-    self.addSubview(startButton)
     startButton.snp.makeConstraints { make in
-      make.leading.equalTo(self.safeAreaLayoutGuide.snp.leading).offset(32)
-      make.bottom.equalTo(self.safeAreaLayoutGuide.snp.bottom).offset(-10)
-      make.trailing.equalTo(self.safeAreaLayoutGuide.snp.trailing).offset(-32)
+      make.leading.equalToSuperview().offset(32)
+      make.bottom.equalTo(safeAreaLayoutGuide.snp.bottom).offset(-10)
+      make.trailing.equalToSuperview().offset(-32)
     }
   }
 }

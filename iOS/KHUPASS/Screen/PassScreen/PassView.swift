@@ -29,7 +29,7 @@ final class PassView: UIView {
   
   let passImageView = UIImageView().then {
     $0.image = UIImage(named: "pass")
-    $0.contentMode = .scaleAspectFill
+    $0.contentMode = .scaleAspectFit
   }
   
   let passButton = PKAddPassButton()
@@ -45,8 +45,8 @@ final class PassView: UIView {
   
   override init(frame: CGRect) {
     super.init(frame: frame)
-    self.backgroundColor = .white
-    self.configUI()
+    backgroundColor = .white
+    configUI()
   }
   
   required init?(coder: NSCoder) {
@@ -56,34 +56,34 @@ final class PassView: UIView {
   // MARK: - method
   
   private func configUI() {
-    self.addSubview(titleLabel)
-    self.titleLabel.snp.makeConstraints { make in
-      make.top.equalTo(self.safeAreaLayoutGuide.snp.top).offset(14)
-      make.leading.equalTo(self.safeAreaLayoutGuide.snp.leading).offset(16)
+    [titleLabel, subLabel, passImageView, passButton, indicator].forEach {
+      addSubview($0)
     }
     
-    self.addSubview(subLabel)
-    self.subLabel.snp.makeConstraints { make in
-      make.top.equalTo(self.titleLabel.snp.bottom).offset(20)
-      make.leading.equalTo(self.titleLabel.snp.leading)
+    titleLabel.snp.makeConstraints { make in
+      make.top.equalTo(safeAreaLayoutGuide.snp.top).offset(14)
+      make.leading.equalToSuperview().offset(16)
     }
     
-    self.addSubview(passImageView)
-    self.passImageView.snp.makeConstraints { make in
+    subLabel.snp.makeConstraints { make in
+      make.top.equalTo(titleLabel.snp.bottom).offset(20)
+      make.leading.equalTo(titleLabel.snp.leading)
+    }
+    
+    passImageView.snp.makeConstraints { make in
       make.centerX.equalToSuperview()
-      make.top.equalTo(self.subLabel.snp.bottom).offset(25)
+      make.top.equalTo(subLabel.snp.bottom).offset(25)
+      make.bottom.lessThanOrEqualTo(passButton.snp.top).offset(-40)
     }
     
-    self.addSubview(passButton)
-    self.passButton.snp.makeConstraints { make in
-      make.leading.equalTo(self.safeAreaLayoutGuide.snp.leading).offset(32)
-      make.bottom.equalTo(self.safeAreaLayoutGuide.snp.bottom).offset(-40)
-      make.trailing.equalTo(self.safeAreaLayoutGuide.snp.trailing).offset(-32)
+    passButton.snp.makeConstraints { make in
+      make.leading.equalToSuperview().offset(32)
+      make.bottom.equalTo(safeAreaLayoutGuide.snp.bottom).offset(-40)
+      make.trailing.equalToSuperview().offset(-32)
       make.height.equalTo(50)
     }
     
-    self.addSubview(indicator)
-    self.indicator.snp.makeConstraints { make in
+    indicator.snp.makeConstraints { make in
       make.center.equalToSuperview()
     }
   }

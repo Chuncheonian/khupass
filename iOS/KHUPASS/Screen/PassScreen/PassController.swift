@@ -35,9 +35,9 @@ final class PassController: UIViewController {
   
   override func viewDidLoad() {
     super.viewDidLoad()
-    self.navigationController?.navigationBar.topItem?.title = ""
+    navigationController?.navigationBar.topItem?.title = ""
     
-    self.passView.passButton.addTarget(
+    passView.passButton.addTarget(
       self,
       action: #selector(fetchPass),
       for: .touchUpInside

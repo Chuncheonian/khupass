@@ -23,19 +23,19 @@ final class CompletedController: UIViewController {
   
   override func viewDidLoad() {
     super.viewDidLoad()
-    self.navigationItem.hidesBackButton = true
-    self.completedView.moveWalletButton.addTarget(self, action: #selector(self.goToWalletApp), for: .touchUpInside)
-    self.requestReview()
+    navigationItem.hidesBackButton = true
+    completedView.moveWalletButton.addTarget(self, action: #selector(moveWalletApp), for: .touchUpInside)
+    requestReview()
   }
   
   override func viewDidAppear(_ animated: Bool) {
     super.viewDidAppear(animated)
-    self.animator()
+    animator()
   }
   
   // MARK: - action
   
-  @objc private func goToWalletApp() {
+  @objc private func moveWalletApp() {
     let url = "wallet://"
 
     if let openApp = URL(string: url), UIApplication.shared.canOpenURL(openApp) {
