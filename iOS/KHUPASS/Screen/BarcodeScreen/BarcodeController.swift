@@ -18,44 +18,42 @@ final class BarcodeController: UIViewController {
   
   override func loadView() {
     super.loadView()
-    self.view = self.barcodeView
+    self.view = barcodeView
   }
   
   override func viewDidLoad() {
     super.viewDidLoad()
-    self.setupNavigationController()
-    self.barcodeView.camearaButton.addTarget(
+    setupNavigationController()
+    barcodeView.camearaButton.addTarget(
       self,
-      action: #selector(self.didTapCameraButton),
+      action: #selector(didTapCameraButton),
       for: .touchUpInside
     )
   }
   
   override func viewDidAppear(_ animated: Bool) {
     super.viewDidAppear(animated)
-    self.barcodeView.pigTailedArrowAnimation.play()
+    barcodeView.pigTailedArrowAnimation.play()
   }
   
   override func viewDidDisappear(_ animated: Bool) {
     super.viewDidDisappear(animated)
-    self.barcodeView.pigTailedArrowAnimation.stop()
+    barcodeView.pigTailedArrowAnimation.stop()
   }
   
   // MARK: - action
   
   @objc private func didTapCameraButton() {
-    if AVCaptureDevice.authorizationStatus(for: .video) == .authorized {
-      moveScannerController()
-    } else {
-      showAlert()
-    }
+    AVCaptureDevice.authorizationStatus(for: .video) == .authorized
+    ? moveScannerController()
+    : showAlert()
   }
   
   // MARK: - method
   
   private func setupNavigationController() {
-    self.navigationController?.navigationBar.tintColor = .black
-    self.navigationController?.navigationBar.topItem?.title = ""
+    navigationController?.navigationBar.tintColor = .black
+    navigationController?.navigationBar.topItem?.title = ""
   }
   
   private func showAlert() {
@@ -69,6 +67,7 @@ final class BarcodeController: UIViewController {
     let moveSettingAction = UIAlertAction(title: "설정으로 이동", style: .default) { [weak self] _ in
       self?.moveSettingApp()
     }
+    
     alertVC.addAction(cancelAction)
     alertVC.addAction(moveSettingAction)
     present(alertVC, animated: true, completion: nil)
@@ -78,7 +77,7 @@ final class BarcodeController: UIViewController {
     let controller = ScannerController()
     controller.delegate = self
     controller.modalPresentationStyle = .fullScreen
-    self.present(controller, animated: true, completion: nil)
+    present(controller, animated: true, completion: nil)
   }
   
   private func moveSettingApp() {
@@ -96,7 +95,7 @@ extension BarcodeController: ScannerControllerDelegate {
   func didCompletedScan(_ controller: ScannerController, barcodeValue: String) {
     controller.dismiss(animated: true)
     let passController = PassController(barcodeValue: barcodeValue)
-    self.navigationController?.pushViewController(passController, animated: true)
+    navigationController?.pushViewController(passController, animated: true)
   }
   
   func didFailedScan(_ controller: ScannerController) {

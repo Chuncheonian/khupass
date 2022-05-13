@@ -6,6 +6,7 @@
 //
 
 import UIKit
+
 import Lottie
 
 final class BarcodeView: UIView {
@@ -37,24 +38,14 @@ final class BarcodeView: UIView {
     $0.transform = CGAffineTransform(rotationAngle: .pi * 1.72)
   }
   
-  lazy var camearaButton = UIButton(type: .system).then {
-    $0.backgroundColor = .khuBlue
-    $0.setTitle("바코드 촬영", for: .normal)
-    $0.setTitleColor(.white, for: .normal)
-    $0.titleLabel?.font = UIFont.nanumGothic(size: 17, family: .bold)
-    $0.snp.makeConstraints { make in
-      make.width.equalTo(311)
-      make.height.equalTo(50)
-    }
-    $0.layer.cornerRadius = 10
-  }
+  lazy var camearaButton = BottomButton(title: "바코드 촬영")
    
   // MARK: - life cycle
   
   override init(frame: CGRect) {
     super.init(frame: frame)
-    self.backgroundColor = .white
-    self.configUI()
+    backgroundColor = .white
+    configUI()
   }
   
   required init?(coder: NSCoder) {
@@ -64,38 +55,35 @@ final class BarcodeView: UIView {
   // MARK: - method
   
   private func configUI() {
-
-    self.addSubview(titleLabel)
-    titleLabel.snp.makeConstraints { make in
-      make.top.equalTo(self.safeAreaLayoutGuide.snp.top).offset(14)
-      make.leading.equalTo(self.safeAreaLayoutGuide.snp.leading).offset(16)
+    [titleLabel, subLabel, creditCardImageView, pigTailedArrowAnimation, camearaButton].forEach {
+      addSubview($0)
     }
     
-    self.addSubview(subLabel)
+    titleLabel.snp.makeConstraints { make in
+      make.top.equalTo(safeAreaLayoutGuide.snp.top).offset(14)
+      make.leading.equalToSuperview().offset(16)
+    }
+    
     subLabel.snp.makeConstraints { make in
       make.top.equalTo(titleLabel.snp.bottom).offset(20)
       make.leading.equalTo(titleLabel.snp.leading)
     }
     
-    self.addSubview(creditCardImageView)
     creditCardImageView.snp.makeConstraints { make in
       make.top.equalTo(subLabel.snp.bottom).offset(80)
       make.centerX.equalToSuperview()
     }
   
-    self.addSubview(pigTailedArrowAnimation)
     pigTailedArrowAnimation.play()
     pigTailedArrowAnimation.snp.makeConstraints { make in
       make.top.equalTo(creditCardImageView.snp.bottom).offset(-40)
       make.leading.equalTo(creditCardImageView.snp.leading).offset(50)
     }
 
-    self.addSubview(camearaButton)
     camearaButton.snp.makeConstraints { make in
-      make.leading.equalTo(self.safeAreaLayoutGuide.snp.leading).offset(32)
-      make.bottom.equalTo(self.safeAreaLayoutGuide.snp.bottom).offset(-40)
-      make.trailing.equalTo(self.safeAreaLayoutGuide.snp.trailing).offset(-32)
+      make.leading.equalToSuperview().offset(32)
+      make.bottom.equalTo(safeAreaLayoutGuide.snp.bottom).offset(-40)
+      make.trailing.equalToSuperview().offset(-32)
     }
   }
 }
-

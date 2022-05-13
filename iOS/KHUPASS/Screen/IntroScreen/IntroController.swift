@@ -6,6 +6,7 @@
 //
 
 import UIKit
+
 import SnapKit
 import Then
 
@@ -19,29 +20,29 @@ final class IntroController: UIViewController {
   
   override func loadView() {
     super.loadView()
-    self.view = self.introView
+    self.view = introView
   }
   
   override func viewDidLoad() {
     super.viewDidLoad()
     
-    self.introView.startButton.addTarget(
+    introView.startButton.addTarget(
       self,
-      action: #selector(self.didTapStartButton),
+      action: #selector(didTapStartButton),
       for: .touchUpInside
     )
   }
   
   override func viewDidAppear(_ animated: Bool) {
     super.viewDidAppear(animated)
-    self.animate()
+    animate()
   }
   
   // MARK: - action
   
   @objc private func didTapStartButton() {
     let controller = BarcodeController()
-    self.navigationController?.pushViewController(controller, animated: true)
+    navigationController?.pushViewController(controller, animated: true)
   }
   
   // MARK: - method
@@ -50,7 +51,7 @@ final class IntroController: UIViewController {
     UIViewPropertyAnimator(duration: 0.8, curve: .easeInOut) {
       self.introView.logoImageView.alpha = 1.0
       self.introView.logoImageView.snp.updateConstraints { make in
-        make.top.equalTo(self.view.safeAreaLayoutGuide.snp.top).offset(0)
+        make.top.equalTo(self.view.safeAreaLayoutGuide.snp.top)
       }
       self.view.layoutIfNeeded()
     }.startAnimation()
@@ -58,7 +59,7 @@ final class IntroController: UIViewController {
     UIViewPropertyAnimator(duration: 0.8, curve: .easeOut) {
       self.introView.contentLabel.alpha = 1.0
       self.introView.contentLabel.snp.updateConstraints { make in
-        make.centerY.equalToSuperview().offset(0)
+        make.centerY.equalToSuperview()
       }
       self.view.layoutIfNeeded()
     }.startAnimation(afterDelay: 0.55)

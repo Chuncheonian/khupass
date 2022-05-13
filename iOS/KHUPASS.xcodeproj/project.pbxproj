@@ -29,6 +29,7 @@
 		D5CCD556282D06FD008D2A04 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5CCD555282D06FD008D2A04 /* NetworkError.swift */; };
 		D5CCD558282D081C008D2A04 /* PassController+Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5CCD557282D081C008D2A04 /* PassController+Error.swift */; };
 		D5CCD55C282D767F008D2A04 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5CCD55B282D767F008D2A04 /* UIViewController+Extension.swift */; };
+		D5D096C4282E1FE100AE62CF /* BottomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5D096C3282E1FE100AE62CF /* BottomButton.swift */; };
 		D5D4510C27844469000EA119 /* PassKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5D4510B27844469000EA119 /* PassKit.framework */; };
 		D5E980FB274A4BF900FD0A98 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = D5E980FA274A4BF900FD0A98 /* SnapKit */; };
 		D5E980FE274A4C0400FD0A98 /* Then in Frameworks */ = {isa = PBXBuildFile; productRef = D5E980FD274A4C0400FD0A98 /* Then */; };
@@ -64,6 +65,7 @@
 		D5CCD555282D06FD008D2A04 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 		D5CCD557282D081C008D2A04 /* PassController+Error.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PassController+Error.swift"; sourceTree = "<group>"; };
 		D5CCD55B282D767F008D2A04 /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
+		D5D096C3282E1FE100AE62CF /* BottomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomButton.swift; sourceTree = "<group>"; };
 		D5D4510927844469000EA119 /* KHUPASS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = KHUPASS.entitlements; sourceTree = "<group>"; };
 		D5D4510B27844469000EA119 /* PassKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PassKit.framework; path = System/Library/Frameworks/PassKit.framework; sourceTree = SDKROOT; };
 		D5E98109274A51C300FD0A98 /* UIFont+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+Extension.swift"; sourceTree = "<group>"; };
@@ -128,12 +130,14 @@
 		D5C78D6D27451283008FAC9A /* KHUPASS */ = {
 			isa = PBXGroup;
 			children = (
-				D5EA251027844BED0064BC41 /* KHUPASSDebug.entitlements */,
-				D5D4510927844469000EA119 /* KHUPASS.entitlements */,
+				D5D096C2282E1EF200AE62CF /* Common */,
 				D5ED3485281020D600814131 /* Screen */,
 				D59AD27D2815A8A3003DB8BE /* Network */,
+				D5E98108274A51B500FD0A98 /* Extensions */,
 				D5E98107274A519D00FD0A98 /* Utils */,
 				D5C78D82274515D0008FAC9A /* Support */,
+				D5D4510927844469000EA119 /* KHUPASS.entitlements */,
+				D5EA251027844BED0064BC41 /* KHUPASSDebug.entitlements */,
 			);
 			path = KHUPASS;
 			sourceTree = "<group>";
@@ -150,6 +154,14 @@
 				D5C78D7C27451285008FAC9A /* Info.plist */,
 			);
 			path = Support;
+			sourceTree = "<group>";
+		};
+		D5D096C2282E1EF200AE62CF /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				D5D096C3282E1FE100AE62CF /* BottomButton.swift */,
+			);
+			path = Common;
 			sourceTree = "<group>";
 		};
 		D5D4510A27844469000EA119 /* Frameworks */ = {
@@ -174,7 +186,6 @@
 			isa = PBXGroup;
 			children = (
 				D566D9CA2756588100B14771 /* Constants.swift */,
-				D5E98108274A51B500FD0A98 /* Extensions */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -341,6 +352,7 @@
 				D5C78D7327451283008FAC9A /* BarcodeController.swift in Sources */,
 				D57BEC0D274DFE5B00E65966 /* UIColor+Extension.swift in Sources */,
 				D58DE8DE274A6F4D00773BBE /* IntroController.swift in Sources */,
+				D5D096C4282E1FE100AE62CF /* BottomButton.swift in Sources */,
 				D5ED348B28102E4400814131 /* CompletedView.swift in Sources */,
 				D5C005BA275791F900151A27 /* CompletedController.swift in Sources */,
 				D5CCD55C282D767F008D2A04 /* UIViewController+Extension.swift in Sources */,

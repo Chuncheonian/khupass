@@ -54,7 +54,7 @@ final class ScannerController: UIViewController {
   // MARK: - action
   
   @objc private func didTapCancelButton() {
-    self.dismiss(animated: true, completion: nil)
+    dismiss(animated: true, completion: nil)
   }
   
   // MARK: - method
@@ -101,7 +101,10 @@ final class ScannerController: UIViewController {
   }
   
   private func configUI() {
-    view.addSubview(topTransparentView)
+    [topTransparentView, bottomTransparentView, descriptionLabel, cancelButton].forEach {
+      view.addSubview($0)
+    }
+    
     topTransparentView.snp.makeConstraints { make in
       make.top.equalToSuperview()
       make.leading.equalToSuperview()
@@ -109,7 +112,6 @@ final class ScannerController: UIViewController {
       make.height.equalTo(250)
     }
     
-    view.addSubview(bottomTransparentView)
     bottomTransparentView.snp.makeConstraints { make in
       make.leading.equalToSuperview()
       make.bottom.equalToSuperview()
@@ -117,16 +119,14 @@ final class ScannerController: UIViewController {
       make.height.equalTo(250)
     }
     
-    view.addSubview(descriptionLabel)
     descriptionLabel.snp.makeConstraints { make in
       make.top.equalTo(bottomTransparentView.snp.top).offset(20)
       make.centerX.equalToSuperview()
     }
     
-    view.addSubview(cancelButton)
     cancelButton.snp.makeConstraints { make in
       make.centerX.equalToSuperview()
-      make.bottom.equalTo(self.view.safeAreaLayoutGuide.snp.bottom).offset(-20)
+      make.bottom.equalTo(view.safeAreaLayoutGuide.snp.bottom).offset(-20)
     }
   }
 }
