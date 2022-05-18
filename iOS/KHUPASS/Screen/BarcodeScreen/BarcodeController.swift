@@ -44,9 +44,12 @@ final class BarcodeController: UIViewController {
   // MARK: - action
   
   @objc private func didTapCameraButton() {
-    AVCaptureDevice.authorizationStatus(for: .video) == .authorized
-    ? moveScannerController()
-    : showAlert()
+    switch AVCaptureDevice.authorizationStatus(for: .video) {
+    case .notDetermined, .authorized:
+      moveScannerController()
+    default:
+      showAlert()
+    }
   }
   
   // MARK: - method
