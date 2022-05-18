@@ -37,11 +37,11 @@
     </a>
   <!-- swift version -->
   <a href="https://github.com/Chuncheonian/khupass">
-    <img src="https://img.shields.io/badge/Swift-v5.6-orange?logo=swift" alt="swift version"/>
+    <img src="https://img.shields.io/badge/Swift-v5.6.1-orange?logo=swift" alt="swift version"/>
   </a>
   <!-- xcode version -->
   <a href="https://github.com/Chuncheonian/khupass">
-    <img src="https://img.shields.io/badge/Xcode-v13.3-blue?logo=Xcode" alt="xcode"/>
+    <img src="https://img.shields.io/badge/Xcode-v13.4-blue?logo=Xcode" alt="xcode"/>
   </a>
 
   <br/>
@@ -115,7 +115,7 @@ UI는 Storyboard가 아닌 코드를 통해 뷰를 작성했습니다.
 
 <br/>
 
-## Result
+## Achievement
 
 <div align="center">
   <img src=".github/appstore_connect.png" width="70%" alt="architecture"/>
