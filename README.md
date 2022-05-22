@@ -3,8 +3,8 @@
 <div>
 <h2>KHU PASS - 경희대학생을 위한 쉽고 편리한 도서관 출입</h2>
 <p>PassKit을 활용하여 경희대 도서관 출입증을 애플 월렛에 보관합니다. 이를 통해 학생증을 직접 찍는 것보다 빠르게 도서관 출입이 가능토록 합니다.</p>
-<a href="https://apps.apple.com/kr/app/khu-pass/id1598848741">
-  <img src=".github/appstore.png" width="150" alt="Download for iOS"/>
+<a href="https://apps.apple.com/kr/app/khu-pass/id1598848741" target="_blank">
+    <img width="150" alt="Download on the App Store" src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg"/>
 </a>
 <a href="https://www.figma.com/community/file/1088052474591726198">
   <img src=".github/figma.png" width="150" alt="Figma"/>
